@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.submit_b = new System.Windows.Forms.Button();
+            this.connect_button = new System.Windows.Forms.Button();
             this.username_label = new System.Windows.Forms.Label();
             this.password_label = new System.Windows.Forms.Label();
             this.database_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.username_txtbox = new System.Windows.Forms.TextBox();
+            this.password_txtbox = new System.Windows.Forms.TextBox();
             this.database_txtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // submit_b
+            // connect_button
             // 
-            this.submit_b.Location = new System.Drawing.Point(131, 221);
-            this.submit_b.Name = "submit_b";
-            this.submit_b.Size = new System.Drawing.Size(153, 62);
-            this.submit_b.TabIndex = 0;
-            this.submit_b.Text = "Submit";
-            this.submit_b.UseVisualStyleBackColor = true;
+            this.connect_button.Location = new System.Drawing.Point(121, 225);
+            this.connect_button.Name = "connect_button";
+            this.connect_button.Size = new System.Drawing.Size(161, 62);
+            this.connect_button.TabIndex = 0;
+            this.connect_button.Text = "Connect";
+            this.connect_button.UseVisualStyleBackColor = true;
+            this.connect_button.Click += new System.EventHandler(this.connect_button_Click);
             // 
             // username_label
             // 
@@ -73,19 +74,19 @@
             this.database_label.TabIndex = 3;
             this.database_label.Text = "Database:";
             // 
-            // textBox1
+            // username_txtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 31);
-            this.textBox1.TabIndex = 4;
+            this.username_txtbox.Location = new System.Drawing.Point(162, 34);
+            this.username_txtbox.Name = "username_txtbox";
+            this.username_txtbox.Size = new System.Drawing.Size(256, 31);
+            this.username_txtbox.TabIndex = 4;
             // 
-            // textBox2
+            // password_txtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(162, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 31);
-            this.textBox2.TabIndex = 5;
+            this.password_txtbox.Location = new System.Drawing.Point(162, 87);
+            this.password_txtbox.Name = "password_txtbox";
+            this.password_txtbox.Size = new System.Drawing.Size(256, 31);
+            this.password_txtbox.TabIndex = 5;
             // 
             // database_txtbox
             // 
@@ -100,12 +101,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 320);
             this.Controls.Add(this.database_txtbox);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.password_txtbox);
+            this.Controls.Add(this.username_txtbox);
             this.Controls.Add(this.database_label);
             this.Controls.Add(this.password_label);
             this.Controls.Add(this.username_label);
-            this.Controls.Add(this.submit_b);
+            this.Controls.Add(this.connect_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "SQLDatabase";
             this.Text = "Database Login";
@@ -116,12 +117,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button submit_b;
+        private System.Windows.Forms.Button connect_button;
         private System.Windows.Forms.Label username_label;
         private System.Windows.Forms.Label password_label;
         private System.Windows.Forms.Label database_label;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox username_txtbox;
+        private System.Windows.Forms.TextBox password_txtbox;
         private System.Windows.Forms.TextBox database_txtbox;
     }
 }
