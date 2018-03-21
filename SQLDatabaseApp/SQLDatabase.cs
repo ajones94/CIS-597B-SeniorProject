@@ -22,26 +22,21 @@ namespace SQLDatabaseApp
         private void connect_button_Click(object sender, EventArgs e)
         {
             SanitizeText(username_txtbox.Text);
-            SanitizeText(password_txtbox.Text);
-            SanitizeText(database_txtbox.Text);
-
         }
 
         public void SanitizeText(string s)
         {
-            string pattern = @"['a-zA-Z0-9']+) (\d+)";
+            string pattern = @"(['a-zA-Z0-9')";
+            MessageBox.Show(pattern, s);
 
-            try
+            Match results = Regex.Match(pattern, s);
+            if (results.Success)
             {
-                Match result = Regex.Match(s, pattern);
-                if (result.Success)
-                {
-                    return;
-                }
+                MessageBox.Show("It Worked");
             }
-            catch (ArgumentException)
+            else
             {
-                MessageBox.Show("User Input is not in Correct Format, please try again.");
+                return;
             }
         }
     }

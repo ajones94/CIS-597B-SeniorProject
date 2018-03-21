@@ -39,9 +39,9 @@
             // 
             // connect_button
             // 
-            this.connect_button.Location = new System.Drawing.Point(121, 225);
+            this.connect_button.Location = new System.Drawing.Point(146, 213);
             this.connect_button.Name = "connect_button";
-            this.connect_button.Size = new System.Drawing.Size(161, 62);
+            this.connect_button.Size = new System.Drawing.Size(223, 62);
             this.connect_button.TabIndex = 0;
             this.connect_button.Text = "Connect";
             this.connect_button.UseVisualStyleBackColor = true;
@@ -50,7 +50,7 @@
             // username_label
             // 
             this.username_label.AutoSize = true;
-            this.username_label.Location = new System.Drawing.Point(13, 40);
+            this.username_label.Location = new System.Drawing.Point(19, 40);
             this.username_label.Name = "username_label";
             this.username_label.Size = new System.Drawing.Size(116, 25);
             this.username_label.TabIndex = 1;
@@ -59,7 +59,7 @@
             // password_label
             // 
             this.password_label.AutoSize = true;
-            this.password_label.Location = new System.Drawing.Point(13, 93);
+            this.password_label.Location = new System.Drawing.Point(19, 93);
             this.password_label.Name = "password_label";
             this.password_label.Size = new System.Drawing.Size(112, 25);
             this.password_label.TabIndex = 2;
@@ -68,7 +68,7 @@
             // database_label
             // 
             this.database_label.AutoSize = true;
-            this.database_label.Location = new System.Drawing.Point(13, 153);
+            this.database_label.Location = new System.Drawing.Point(19, 153);
             this.database_label.Name = "database_label";
             this.database_label.Size = new System.Drawing.Size(110, 25);
             this.database_label.TabIndex = 3;
@@ -76,21 +76,21 @@
             // 
             // username_txtbox
             // 
-            this.username_txtbox.Location = new System.Drawing.Point(162, 34);
+            this.username_txtbox.Location = new System.Drawing.Point(229, 34);
             this.username_txtbox.Name = "username_txtbox";
             this.username_txtbox.Size = new System.Drawing.Size(256, 31);
             this.username_txtbox.TabIndex = 4;
             // 
             // password_txtbox
             // 
-            this.password_txtbox.Location = new System.Drawing.Point(162, 87);
+            this.password_txtbox.Location = new System.Drawing.Point(229, 87);
             this.password_txtbox.Name = "password_txtbox";
             this.password_txtbox.Size = new System.Drawing.Size(256, 31);
             this.password_txtbox.TabIndex = 5;
             // 
             // database_txtbox
             // 
-            this.database_txtbox.Location = new System.Drawing.Point(162, 147);
+            this.database_txtbox.Location = new System.Drawing.Point(229, 147);
             this.database_txtbox.Name = "database_txtbox";
             this.database_txtbox.Size = new System.Drawing.Size(256, 31);
             this.database_txtbox.TabIndex = 6;
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 320);
+            this.ClientSize = new System.Drawing.Size(529, 299);
             this.Controls.Add(this.database_txtbox);
             this.Controls.Add(this.password_txtbox);
             this.Controls.Add(this.username_txtbox);
