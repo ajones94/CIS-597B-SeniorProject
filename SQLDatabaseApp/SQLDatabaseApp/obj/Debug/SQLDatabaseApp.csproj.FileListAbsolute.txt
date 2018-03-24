@@ -1,0 +1,9 @@
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\bin\Debug\SQLDatabaseApp.exe.config
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\bin\Debug\SQLDatabaseApp.exe
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\bin\Debug\SQLDatabaseApp.pdb
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.Properties.Resources.resources
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.SQLDatabase.resources
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.csproj.GenerateResource.Cache
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.csproj.CoreCompileInputs.cache
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.exe
+C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.pdb
