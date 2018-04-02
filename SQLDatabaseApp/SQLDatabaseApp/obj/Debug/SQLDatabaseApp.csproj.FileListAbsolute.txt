@@ -7,3 +7,6 @@ C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseA
 C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.csproj.CoreCompileInputs.cache
 C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.exe
 C:\Users\Handedtoo2\Desktop\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.pdb
+C:\Users\Anson Jones\Desktop\New folder\SQLDatabaseApp\SQLDatabaseApp\bin\Debug\SQLDatabaseApp.exe.config
+C:\Users\Anson Jones\Desktop\New folder\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.exe
+C:\Users\Anson Jones\Desktop\New folder\SQLDatabaseApp\SQLDatabaseApp\obj\Debug\SQLDatabaseApp.pdb
