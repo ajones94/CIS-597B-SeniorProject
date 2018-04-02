@@ -21,19 +21,21 @@ namespace SQLDatabaseApp
 
         private void user_login_button_Click(object sender, EventArgs e)
         {
-            SanitizeText(username_txtbox.Text);
-            SanitizeText(password_txtbox.Text);
-            SanitizeText(database_txtbox.Text);
-            MessageBox.Show("You've successfully logged in!");
+
+            bool results = SanitizeText(username_txtbox.Text, password_txtbox.Text, database_txtbox.Text);
+            if(results == true) { MessageBox.Show("You've successfully logged in!"); }
+            else { MessageBox.Show("Username, Password, or Database in incorrect format"); }
         }
 
-        public void SanitizeText(string s)
+        public bool SanitizeText(string uname, string psswd, string db)
         {
-            string pattern = "^[a-zA-Z0-9_-@]+$";
-            Match match = Regex.Match(s, pattern);
+            string pattern = "^[a-zA-Z0-9_/-@]+$";
+            Match userName = Regex.Match(uname, pattern);
+            Match passWord = Regex.Match(psswd, pattern);
+            Match dataBase = Regex.Match(db, pattern);
 
-            if (match.Success) { return; }
-            else { MessageBox.Show("String is not in the correct format!"); }
+            if (userName.Success && passWord.Success && dataBase.Success) { return true; }
+            else { return false; }
         }
     }
 }
