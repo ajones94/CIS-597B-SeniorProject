@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLDatabaseApp", "SQLDatabaseApp\SQLDatabaseApp.csproj", "{172AFD97-3AA6-409A-BAE9-7731FD40DC36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLDatabaseApp", "SQLDatabaseApp.csproj", "{172AFD97-3AA6-409A-BAE9-7731FD40DC36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8EE7F7EA-CAD7-4E50-95FF-EA95B0434C8D}
+		SolutionGuid = {ADF8B2DA-5C0A-47F6-9F5A-C2938E35CA5C}
 	EndGlobalSection
 EndGlobal

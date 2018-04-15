@@ -21,10 +21,24 @@ namespace SQLDatabaseApp
 
         private void user_login_button_Click(object sender, EventArgs e)
         {
+            SqlConnection Connection;
+            string userName = username_txtbox.Text;
+            string passWord = password_txtbox.Text;
+            string dataBase = database_txtbox.Text;
 
-            bool results = SanitizeText(username_txtbox.Text, password_txtbox.Text, database_txtbox.Text);
-            if(results == true) { MessageBox.Show("You've successfully logged in!"); }
+            bool results = SanitizeText(userName, passWord, dataBase);
+            if(results == true) {
+                Connection = new SqlConnection(
+                    "user id = " + userName + "; password = " + passWord + "; server=serverurl;" + 
+                    "Trusted_Connection = yes;" + "database = " + dataBase + "; connection timeout = 15"
+                    );
+            }
             else { MessageBox.Show("Username, Password, or Database in incorrect format"); }
+
+            try
+            {
+                Connection.Open();
+            }
         }
 
         public bool SanitizeText(string uname, string psswd, string db)
