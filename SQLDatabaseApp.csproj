@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableInput.Designer.cs">
+      <DependentUpon>TableInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Access.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <EmbeddedResource Include="SQLDatabase.resx">
       <DependentUpon>SQLDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableInput.resx">
+      <DependentUpon>TableInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Access.resx">
+      <DependentUpon>User_Access.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -14,42 +14,48 @@ namespace SQLDatabaseApp
 {
     public partial class SQLDatabase : Form
     {
+        private string user;
+        private string passwd;
+        private bool value;
+        Admin_Access Admin = new Admin_Access();
+        User_Access User = new User_Access();
+        SqlConnection sqlConnect;
+
+
         public SQLDatabase()
         {
             InitializeComponent();
         }
 
-        private void user_login_button_Click(object sender, EventArgs e)
-        {
-            SqlConnection Connection;
-            string userName = username_txtbox.Text;
-            string passWord = password_txtbox.Text;
-            string dataBase = database_txtbox.Text;
-
-            bool results = SanitizeText(userName, passWord, dataBase);
-            if(results == true) {
-                Connection = new SqlConnection(
-                    "user id = " + userName + "; password = " + passWord + "; server=serverurl;" + 
-                    "Trusted_Connection = yes;" + "database = " + dataBase + "; connection timeout = 15"
-                    );
-            }
-            else { MessageBox.Show("Username, Password, or Database in incorrect format"); }
-
-            try
-            {
-                Connection.Open();
-            }
-        }
-
-        public bool SanitizeText(string uname, string psswd, string db)
+        public bool SanitizeText(string uname, string psswd)
         {
             string pattern = "^[a-zA-Z0-9_/-@]+$";
             Match userName = Regex.Match(uname, pattern);
             Match passWord = Regex.Match(psswd, pattern);
-            Match dataBase = Regex.Match(db, pattern);
 
-            if (userName.Success && passWord.Success && dataBase.Success) { return true; }
+            if (userName.Success && passWord.Success) { return true; }
             else { return false; }
+        }
+
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            user = username_txtbox.Text;
+            passwd = password_txtbox.Text;
+
+            value = SanitizeText(user, passwd);
+
+            if (value)
+            {
+                using (sqlConnect = new SqlConnection())
+                {
+                    if (user_button.Checked) { User.Show(); User.ObtainConnection(sqlConnect); }
+                    else if (admin_button.Checked) { Admin.Show(); Admin.ObtainConnection(sqlConnect); }
+                }
+            }
+            else
+            {
+                MessageBox.Show("User input invalid!");
+            }
         }
     }
 }

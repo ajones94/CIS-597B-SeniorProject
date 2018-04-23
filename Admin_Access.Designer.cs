@@ -28,34 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.CreateUser = new System.Windows.Forms.Button();
+            this.CreateTable = new System.Windows.Forms.Button();
+            this.AssignPriveleges = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // CreateUser
             // 
-            this.button1.Location = new System.Drawing.Point(44, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 61);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CreateUser.Location = new System.Drawing.Point(12, 12);
+            this.CreateUser.Name = "CreateUser";
+            this.CreateUser.Size = new System.Drawing.Size(196, 32);
+            this.CreateUser.TabIndex = 0;
+            this.CreateUser.Text = "Create User";
+            this.CreateUser.UseVisualStyleBackColor = true;
+            this.CreateUser.Click += new System.EventHandler(this.CreateUser_Click);
+            // 
+            // CreateTable
+            // 
+            this.CreateTable.Location = new System.Drawing.Point(12, 50);
+            this.CreateTable.Name = "CreateTable";
+            this.CreateTable.Size = new System.Drawing.Size(196, 32);
+            this.CreateTable.TabIndex = 1;
+            this.CreateTable.Text = "Create Table";
+            this.CreateTable.UseVisualStyleBackColor = true;
+            this.CreateTable.Click += new System.EventHandler(this.CreateTable_Click);
+            // 
+            // AssignPriveleges
+            // 
+            this.AssignPriveleges.Location = new System.Drawing.Point(12, 88);
+            this.AssignPriveleges.Name = "AssignPriveleges";
+            this.AssignPriveleges.Size = new System.Drawing.Size(196, 32);
+            this.AssignPriveleges.TabIndex = 2;
+            this.AssignPriveleges.Text = "Assign Priveleges";
+            this.AssignPriveleges.UseVisualStyleBackColor = true;
+            this.AssignPriveleges.Click += new System.EventHandler(this.AssignPriveleges_Click);
             // 
             // Admin_Access
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 502);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ClientSize = new System.Drawing.Size(220, 137);
+            this.Controls.Add(this.AssignPriveleges);
+            this.Controls.Add(this.CreateTable);
+            this.Controls.Add(this.CreateUser);
             this.Name = "Admin_Access";
-            this.Text = "Admin_Access";
+            this.Text = "Admin Access";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CreateUser;
+        private System.Windows.Forms.Button CreateTable;
+        private System.Windows.Forms.Button AssignPriveleges;
     }
 }

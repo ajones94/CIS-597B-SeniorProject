@@ -28,31 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.user_login_button = new System.Windows.Forms.Button();
             this.username_label = new System.Windows.Forms.Label();
             this.password_label = new System.Windows.Forms.Label();
-            this.database_label = new System.Windows.Forms.Label();
             this.username_txtbox = new System.Windows.Forms.TextBox();
             this.password_txtbox = new System.Windows.Forms.TextBox();
-            this.database_txtbox = new System.Windows.Forms.TextBox();
-            this.admin_login_button = new System.Windows.Forms.Button();
+            this.login_button = new System.Windows.Forms.Button();
+            this.user_button = new System.Windows.Forms.RadioButton();
+            this.admin_button = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
-            // 
-            // user_login_button
-            // 
-            this.user_login_button.Location = new System.Drawing.Point(11, 104);
-            this.user_login_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.user_login_button.Name = "user_login_button";
-            this.user_login_button.Size = new System.Drawing.Size(80, 32);
-            this.user_login_button.TabIndex = 0;
-            this.user_login_button.Text = "User Login";
-            this.user_login_button.UseVisualStyleBackColor = true;
-            this.user_login_button.Click += new System.EventHandler(this.user_login_button_Click);
             // 
             // username_label
             // 
             this.username_label.AutoSize = true;
-            this.username_label.Location = new System.Drawing.Point(8, 20);
+            this.username_label.Location = new System.Drawing.Point(11, 18);
             this.username_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.username_label.Name = "username_label";
             this.username_label.Size = new System.Drawing.Size(58, 13);
@@ -62,71 +50,75 @@
             // password_label
             // 
             this.password_label.AutoSize = true;
-            this.password_label.Location = new System.Drawing.Point(8, 44);
+            this.password_label.Location = new System.Drawing.Point(11, 42);
             this.password_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.password_label.Name = "password_label";
             this.password_label.Size = new System.Drawing.Size(56, 13);
             this.password_label.TabIndex = 2;
             this.password_label.Text = "Password:";
             // 
-            // database_label
-            // 
-            this.database_label.AutoSize = true;
-            this.database_label.Location = new System.Drawing.Point(8, 68);
-            this.database_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.database_label.Name = "database_label";
-            this.database_label.Size = new System.Drawing.Size(56, 13);
-            this.database_label.TabIndex = 3;
-            this.database_label.Text = "Database:";
-            // 
             // username_txtbox
             // 
-            this.username_txtbox.Location = new System.Drawing.Point(81, 18);
-            this.username_txtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.username_txtbox.Location = new System.Drawing.Point(84, 11);
+            this.username_txtbox.Margin = new System.Windows.Forms.Padding(2);
             this.username_txtbox.Name = "username_txtbox";
             this.username_txtbox.Size = new System.Drawing.Size(130, 20);
             this.username_txtbox.TabIndex = 4;
             // 
             // password_txtbox
             // 
-            this.password_txtbox.Location = new System.Drawing.Point(81, 42);
-            this.password_txtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password_txtbox.Location = new System.Drawing.Point(84, 35);
+            this.password_txtbox.Margin = new System.Windows.Forms.Padding(2);
             this.password_txtbox.Name = "password_txtbox";
             this.password_txtbox.Size = new System.Drawing.Size(130, 20);
             this.password_txtbox.TabIndex = 5;
             // 
-            // database_txtbox
+            // login_button
             // 
-            this.database_txtbox.Location = new System.Drawing.Point(81, 66);
-            this.database_txtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.database_txtbox.Name = "database_txtbox";
-            this.database_txtbox.Size = new System.Drawing.Size(130, 20);
-            this.database_txtbox.TabIndex = 6;
+            this.login_button.Location = new System.Drawing.Point(14, 124);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(200, 28);
+            this.login_button.TabIndex = 6;
+            this.login_button.Text = "Login";
+            this.login_button.UseVisualStyleBackColor = true;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
-            // admin_login_button
+            // user_button
             // 
-            this.admin_login_button.Location = new System.Drawing.Point(111, 104);
-            this.admin_login_button.Name = "admin_login_button";
-            this.admin_login_button.Size = new System.Drawing.Size(100, 32);
-            this.admin_login_button.TabIndex = 7;
-            this.admin_login_button.Text = "Admin Login";
-            this.admin_login_button.UseVisualStyleBackColor = true;
+            this.user_button.AutoSize = true;
+            this.user_button.Location = new System.Drawing.Point(84, 71);
+            this.user_button.Name = "user_button";
+            this.user_button.Size = new System.Drawing.Size(47, 17);
+            this.user_button.TabIndex = 7;
+            this.user_button.TabStop = true;
+            this.user_button.Text = "User";
+            this.user_button.UseVisualStyleBackColor = true;
+            // 
+            // admin_button
+            // 
+            this.admin_button.AutoSize = true;
+            this.admin_button.Location = new System.Drawing.Point(84, 94);
+            this.admin_button.Name = "admin_button";
+            this.admin_button.Size = new System.Drawing.Size(54, 17);
+            this.admin_button.TabIndex = 8;
+            this.admin_button.TabStop = true;
+            this.admin_button.Text = "Admin";
+            this.admin_button.UseVisualStyleBackColor = true;
             // 
             // SQLDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(225, 148);
-            this.Controls.Add(this.admin_login_button);
-            this.Controls.Add(this.database_txtbox);
+            this.ClientSize = new System.Drawing.Size(225, 164);
+            this.Controls.Add(this.admin_button);
+            this.Controls.Add(this.user_button);
+            this.Controls.Add(this.login_button);
             this.Controls.Add(this.password_txtbox);
             this.Controls.Add(this.username_txtbox);
-            this.Controls.Add(this.database_label);
             this.Controls.Add(this.password_label);
             this.Controls.Add(this.username_label);
-            this.Controls.Add(this.user_login_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SQLDatabase";
             this.Text = "Database Login";
             this.ResumeLayout(false);
@@ -135,15 +127,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button user_login_button;
         private System.Windows.Forms.Label username_label;
         private System.Windows.Forms.Label password_label;
-        private System.Windows.Forms.Label database_label;
         private System.Windows.Forms.TextBox username_txtbox;
         private System.Windows.Forms.TextBox password_txtbox;
-        private System.Windows.Forms.TextBox database_txtbox;
-        private System.Windows.Forms.Button admin_login_button;
+        private System.Windows.Forms.Button login_button;
+        private System.Windows.Forms.RadioButton user_button;
+        private System.Windows.Forms.RadioButton admin_button;
     }
 }
 
