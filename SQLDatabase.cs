@@ -39,7 +39,7 @@ namespace SQLDatabaseApp
 
             if (ts.SanitizeText(user) && ts.SanitizeText(passwd))
             {
-                using (sqlConnect = new SqlConnection( "Data Source = (localdb) MSSQLLocalDB; Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"))
+                using (sqlConnect = new SqlConnection( "Data Source = testDatabase.mdf; Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"))
                 {
                     if (user_button.Checked) { User.Show(); User.ObtainConnection(sqlConnect, ts); }
                     else if (admin_button.Checked) { Admin.Show(); Admin.ObtainConnection(sqlConnect, ts); }

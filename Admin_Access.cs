@@ -37,6 +37,7 @@ namespace SQLDatabaseApp
         {
             connection = sql;
             textSan = ts;
+            connection.Open();
         }
 
         private void CreateUser_Click(object sender, EventArgs e)
