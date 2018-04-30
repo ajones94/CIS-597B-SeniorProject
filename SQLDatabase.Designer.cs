@@ -35,6 +35,7 @@
             this.login_button = new System.Windows.Forms.Button();
             this.user_button = new System.Windows.Forms.RadioButton();
             this.admin_button = new System.Windows.Forms.RadioButton();
+            this.exit_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // username_label
@@ -72,12 +73,14 @@
             this.password_txtbox.Name = "password_txtbox";
             this.password_txtbox.Size = new System.Drawing.Size(130, 20);
             this.password_txtbox.TabIndex = 5;
-            //
+            this.password_txtbox.TextChanged += new System.EventHandler(this.password_txtbox_TextChanged);
+            // 
             // login_button
             // 
-            this.login_button.Location = new System.Drawing.Point(14, 124);
+            this.login_button.Enabled = false;
+            this.login_button.Location = new System.Drawing.Point(12, 124);
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(200, 28);
+            this.login_button.Size = new System.Drawing.Size(90, 28);
             this.login_button.TabIndex = 6;
             this.login_button.Text = "Login";
             this.login_button.UseVisualStyleBackColor = true;
@@ -105,11 +108,22 @@
             this.admin_button.Text = "Admin";
             this.admin_button.UseVisualStyleBackColor = true;
             // 
+            // exit_Button
+            // 
+            this.exit_Button.Location = new System.Drawing.Point(123, 124);
+            this.exit_Button.Name = "exit_Button";
+            this.exit_Button.Size = new System.Drawing.Size(90, 28);
+            this.exit_Button.TabIndex = 9;
+            this.exit_Button.Text = "Exit";
+            this.exit_Button.UseVisualStyleBackColor = true;
+            this.exit_Button.Click += new System.EventHandler(this.exit_Button_Click);
+            // 
             // SQLDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(225, 164);
+            this.Controls.Add(this.exit_Button);
             this.Controls.Add(this.admin_button);
             this.Controls.Add(this.user_button);
             this.Controls.Add(this.login_button);
@@ -134,6 +148,7 @@
         private System.Windows.Forms.Button login_button;
         private System.Windows.Forms.RadioButton user_button;
         private System.Windows.Forms.RadioButton admin_button;
+        private System.Windows.Forms.Button exit_Button;
     }
 }
 

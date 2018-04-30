@@ -14,6 +14,7 @@ namespace SQLDatabaseApp
     public partial class Admin_Access : Form
     {
         private SqlConnection connection;
+        private TextSanitation textSan;
         private SqlCommand command;
 
         private string username;
@@ -32,10 +33,12 @@ namespace SQLDatabaseApp
             InitializeComponent();
         }
 
-        public void ObtainConnection(SqlConnection sql)
+        public void ObtainConnection(SqlConnection sql, TextSanitation ts)
         {
             connection = sql;
+            textSan = ts;
         }
+
         private void CreateUser_Click(object sender, EventArgs e)
         {
             CreateUser_Form createForm = new CreateUser_Form();
@@ -43,15 +46,23 @@ namespace SQLDatabaseApp
             createForm.GetData(out username, out password);
             try
             {
-                command = connection.CreateCommand();
-                command.CommandText = $"GRANT CONNECT TO {username} IDENTIFIED BY {password}";
-                command.CommandType = CommandType.Text;
-                command.CommandTimeout = 30;
+                if(textSan.SanitizeText(username) && textSan.SanitizeText(password))
+                {
+                    command = connection.CreateCommand();
+                    command.CommandText = $"GRANT CONNECT TO {username} IDENTIFIED BY {password}";
+                    command.CommandType = CommandType.Text;
+                    command.CommandTimeout = 30;
+                }
+                else { return; }
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Error Occured!");
+                MessageBox.Show("Incorrect Format");
             }
+
+            command.CommandText = $"GRANT CREATE SESSION TO {username}";
+            command.CommandType = CommandType.Text;
+            command.CommandTimeout = 30;
         }
 
         private void CreateTable_Click(object sender, EventArgs e)
@@ -61,14 +72,18 @@ namespace SQLDatabaseApp
             tableform.GetData(out tableName, out columnName, out columnValue);
             try
             {
-                command = connection.CreateCommand();
-                command.CommandText = $"CREATE TABLE {tableName} ({columnName} {columnValue})";
-                command.CommandType = CommandType.Text;
-                command.CommandTimeout = 30;
+                if(textSan.SanitizeText(tableName) && textSan.SanitizeText(columnName) && textSan.SanitizeText(columnValue))
+                {
+                    command = connection.CreateCommand();
+                    command.CommandText = $"CREATE TABLE {tableName} ({columnName} {columnValue})";
+                    command.CommandType = CommandType.Text;
+                    command.CommandTimeout = 30;
+                }
+                else { return; }
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Error Occured!");
+                MessageBox.Show("Incorrect Format");
             }
         }
 
@@ -76,17 +91,21 @@ namespace SQLDatabaseApp
         {
             AssignPriveleges_Form priveleges = new AssignPriveleges_Form();
             priveleges.ShowDialog();
-            priveleges.GetValues(out permission, out user, out database);
+            priveleges.GetData(out permission, out user, out database);
             try
             {
-                command = connection.CreateCommand();
-                command.CommandText = $"GRANT {permission} TO {user} ON {database}";
-                command.CommandType = CommandType.Text;
-                command.CommandTimeout = 30;
+                if(textSan.SanitizeText(permission) && textSan.SanitizeText(user) && textSan.SanitizeText(database))
+                {
+                    command = connection.CreateCommand();
+                    command.CommandText = $"GRANT {permission} TO {user} ON {database}";
+                    command.CommandType = CommandType.Text;
+                    command.CommandTimeout = 30;
+                }
+                else { return; }
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("An Error Has Occured");
+                MessageBox.Show("Incorrect Format");
             }
         }
     }

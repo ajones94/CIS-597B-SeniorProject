@@ -14,6 +14,7 @@ namespace SQLDatabaseApp
     public partial class User_Access : Form
     {
         private SqlConnection Connection;
+        private TextSanitation textSan;
         private SqlCommand command;
 
         string createTable;
@@ -29,9 +30,11 @@ namespace SQLDatabaseApp
             InitializeComponent();
         }
 
-        public void ObtainConnection(SqlConnection connection)
+        public void ObtainConnection(SqlConnection connection, TextSanitation ts)
         {
             Connection = connection;
+            textSan = ts;
+            Connection.Open();
         }
 
         private void addData_button_Click(object sender, EventArgs e)
@@ -39,16 +42,21 @@ namespace SQLDatabaseApp
             Insert_Form insertForm = new Insert_Form();
             insertForm.ShowDialog();
             insertForm.GetData(out createTable, out createColumn, out createDatatype);
+
             try
             {
-                command = Connection.CreateCommand();
-                command.CommandText = $"INSERT INTO {createTable} ({createColumn}) VALUES ({createDatatype})";
-                command.CommandType = CommandType.Text;
-                command.CommandTimeout = 30;
+                if(textSan.SanitizeText(createTable) && textSan.SanitizeText(createColumn) && textSan.SanitizeText(createDatatype))
+                {
+                    command = Connection.CreateCommand();
+                    command.CommandText = $"INSERT INTO {createTable} ({createColumn}) VALUES ({createDatatype})";
+                    command.CommandType = CommandType.Text;
+                    command.CommandTimeout = 30;
+                }
+                else { return; }
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Error Occured!");
+                MessageBox.Show("Incorrect Format");
             }
         }
 
@@ -59,14 +67,18 @@ namespace SQLDatabaseApp
             deleteForm.GetData(out removeTable, out removeColumn, out removeDatatype);
             try
             {
-                command = Connection.CreateCommand();
-                command.CommandText = $"DELETE FROM {removeTable} WHERE {removeColumn} = {removeDatatype}";
-                command.CommandType = CommandType.Text;
-                command.CommandTimeout = 20;
+                if(textSan.SanitizeText(removeTable) && textSan.SanitizeText(removeColumn) && textSan.SanitizeText(removeDatatype))
+                {
+                    command = Connection.CreateCommand();
+                    command.CommandText = $"DELETE FROM {removeTable} WHERE {removeColumn} = {removeDatatype}";
+                    command.CommandType = CommandType.Text;
+                    command.CommandTimeout = 30;
+                }
+                else { return; }
             }
             catch(ArgumentException)
             {
-                MessageBox.Show("An Error has occured!");
+                MessageBox.Show("Incorrect Format");
             }
         }
 
@@ -78,23 +90,26 @@ namespace SQLDatabaseApp
             List<string> data = new List<string>();
             try
             {
-                command = Connection.CreateCommand();
-                command.CommandText = $"SELECT * from {table}";
-                command.CommandType = CommandType.Text;
-                command.CommandTimeout = 20;
-
-                /*
-                SqlDataReader sdr = command.ExecuteReader();
-                while (sdr.Read())
+                if (textSan.SanitizeText(table))
                 {
-                    data.Add(sdr.ToString());
+                    command = Connection.CreateCommand();
+                    command.CommandText = $"SELECT * from {table}";
+                    command.CommandType = CommandType.Text;
+                    command.CommandTimeout = 30;
+
+                    using(SqlDataReader sdr = command.ExecuteReader())
+                    {
+                        int i = 0;
+                        data.Add(sdr[i].ToString());
+                        i++;
+                    }
+                    sqlData_GridView.DataSource = data;
                 }
-                */
-                sqlData_GridView.DataSource = data;
+                else { return; }
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Invalid Table");
+                MessageBox.Show("Incorrect Format");
             }
         }
     }
