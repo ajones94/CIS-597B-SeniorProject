@@ -72,7 +72,7 @@
             this.password_txtbox.Name = "password_txtbox";
             this.password_txtbox.Size = new System.Drawing.Size(130, 20);
             this.password_txtbox.TabIndex = 5;
-            // 
+            //
             // login_button
             // 
             this.login_button.Location = new System.Drawing.Point(14, 124);

@@ -25,6 +25,9 @@ namespace SQLDatabaseApp
         public SQLDatabase()
         {
             InitializeComponent();
+            password_txtbox.Text = "";
+            password_txtbox.PasswordChar = '*';
+            password_txtbox.MaxLength = 12;
         }
 
         public bool SanitizeText(string uname, string psswd)
@@ -50,6 +53,8 @@ namespace SQLDatabaseApp
                 {
                     if (user_button.Checked) { User.Show(); User.ObtainConnection(sqlConnect); }
                     else if (admin_button.Checked) { Admin.Show(); Admin.ObtainConnection(sqlConnect); }
+                    username_txtbox.Clear();
+                    password_txtbox.Clear();
                 }
             }
             else

@@ -31,7 +31,8 @@
             this.RemoveData = new System.Windows.Forms.Button();
             this.addData_button = new System.Windows.Forms.Button();
             this.ViewData = new System.Windows.Forms.Button();
-            this.sqlData_list = new System.Windows.Forms.ListBox();
+            this.sqlData_GridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlData_GridView)).BeginInit();
             this.SuspendLayout();
             // 
             // RemoveData
@@ -64,25 +65,26 @@
             this.ViewData.UseVisualStyleBackColor = true;
             this.ViewData.Click += new System.EventHandler(this.ViewData_Click);
             // 
-            // sqlData_list
+            // sqlData_GridView
             // 
-            this.sqlData_list.FormattingEnabled = true;
-            this.sqlData_list.Location = new System.Drawing.Point(109, 12);
-            this.sqlData_list.Name = "sqlData_list";
-            this.sqlData_list.Size = new System.Drawing.Size(403, 407);
-            this.sqlData_list.TabIndex = 4;
+            this.sqlData_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sqlData_GridView.Location = new System.Drawing.Point(109, 12);
+            this.sqlData_GridView.Name = "sqlData_GridView";
+            this.sqlData_GridView.Size = new System.Drawing.Size(403, 420);
+            this.sqlData_GridView.TabIndex = 4;
             // 
             // User_Access
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 444);
-            this.Controls.Add(this.sqlData_list);
+            this.Controls.Add(this.sqlData_GridView);
             this.Controls.Add(this.ViewData);
             this.Controls.Add(this.addData_button);
             this.Controls.Add(this.RemoveData);
             this.Name = "User_Access";
             this.Text = "User Access";
+            ((System.ComponentModel.ISupportInitialize)(this.sqlData_GridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,6 +94,6 @@
         private System.Windows.Forms.Button RemoveData;
         private System.Windows.Forms.Button addData_button;
         private System.Windows.Forms.Button ViewData;
-        private System.Windows.Forms.ListBox sqlData_list;
+        private System.Windows.Forms.DataGridView sqlData_GridView;
     }
 }

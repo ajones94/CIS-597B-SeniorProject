@@ -67,6 +67,7 @@
             this.Controls.Add(this.tableInput_label);
             this.Controls.Add(this.table_txtbox);
             this.Controls.Add(this.table_button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "TableInputForm";
             this.Text = "Table ";
             this.ResumeLayout(false);

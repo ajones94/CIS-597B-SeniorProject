@@ -12,6 +12,7 @@ namespace SQLDatabaseApp
 {
     public partial class TableInputForm : Form
     {
+        private string table;
         public TableInputForm()
         {
             InitializeComponent();
@@ -19,11 +20,12 @@ namespace SQLDatabaseApp
 
         private void table_button_Click(object sender, EventArgs e)
         {
-            GetTable();
+            table = table_txtbox.Text;
+            Close();
         }
         public string GetTable()
         {
-            return table_txtbox.Text;
+            return table;
         }
     }
 }

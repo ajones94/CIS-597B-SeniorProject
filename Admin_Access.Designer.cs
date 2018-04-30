@@ -35,9 +35,10 @@
             // 
             // CreateUser
             // 
-            this.CreateUser.Location = new System.Drawing.Point(12, 12);
+            this.CreateUser.Location = new System.Drawing.Point(24, 23);
+            this.CreateUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.CreateUser.Name = "CreateUser";
-            this.CreateUser.Size = new System.Drawing.Size(196, 32);
+            this.CreateUser.Size = new System.Drawing.Size(392, 62);
             this.CreateUser.TabIndex = 0;
             this.CreateUser.Text = "Create User";
             this.CreateUser.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // CreateTable
             // 
-            this.CreateTable.Location = new System.Drawing.Point(12, 50);
+            this.CreateTable.Location = new System.Drawing.Point(24, 96);
+            this.CreateTable.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.CreateTable.Name = "CreateTable";
-            this.CreateTable.Size = new System.Drawing.Size(196, 32);
+            this.CreateTable.Size = new System.Drawing.Size(392, 62);
             this.CreateTable.TabIndex = 1;
             this.CreateTable.Text = "Create Table";
             this.CreateTable.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // AssignPriveleges
             // 
-            this.AssignPriveleges.Location = new System.Drawing.Point(12, 88);
+            this.AssignPriveleges.Location = new System.Drawing.Point(24, 169);
+            this.AssignPriveleges.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AssignPriveleges.Name = "AssignPriveleges";
-            this.AssignPriveleges.Size = new System.Drawing.Size(196, 32);
+            this.AssignPriveleges.Size = new System.Drawing.Size(392, 62);
             this.AssignPriveleges.TabIndex = 2;
             this.AssignPriveleges.Text = "Assign Priveleges";
             this.AssignPriveleges.UseVisualStyleBackColor = true;
@@ -65,12 +68,14 @@
             // 
             // Admin_Access
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 137);
+            this.ClientSize = new System.Drawing.Size(443, 263);
             this.Controls.Add(this.AssignPriveleges);
             this.Controls.Add(this.CreateTable);
             this.Controls.Add(this.CreateUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Admin_Access";
             this.Text = "Admin Access";
             this.ResumeLayout(false);
