@@ -13,43 +13,35 @@ namespace SQLDatabaseApp
 {
     public partial class SQLDatabase : Form
     {
-        private string user;
-        private string passwd;
-
-        Admin_Access Admin = new Admin_Access();
-        User_Access User = new User_Access();
-
-        SqlConnection sqlConnect;
+        string user = "";
+        string password = "";
+        string database = "";
+        DataAccess_Form User = new DataAccess_Form();
         TextSanitation ts = new TextSanitation();
-
 
         public SQLDatabase()
         {
             InitializeComponent();
-
-            password_txtbox.Text = "";
-            password_txtbox.PasswordChar = '*';
-            password_txtbox.MaxLength = 12;
+            Password_TxtBox.PasswordChar = '*';
+            Password_TxtBox.MaxLength = 12;
         }
 
-        private void login_button_Click(object sender, EventArgs e)
+        private void Login_Button_Click(object sender, EventArgs e)
         {
-            user = username_txtbox.Text;
-            passwd = password_txtbox.Text;
-
-            if (ts.SanitizeText(user) && ts.SanitizeText(passwd))
+            user = Username_TxtBox.Text;
+            password = Password_TxtBox.Text;
+            database = Database_TxtBox.Text;
+            if (ts.SanitizeText(user) && ts.SanitizeText(password) && ts.SanitizeText(database))
             {
-                using (sqlConnect = new SqlConnection( "Data Source = testDatabase.mdf; Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"))
-                {
-                    if (user_button.Checked) { User.Show(); User.ObtainConnection(sqlConnect, ts); }
-                    else if (admin_button.Checked) { Admin.Show(); Admin.ObtainConnection(sqlConnect, ts); }
-                    username_txtbox.Clear();
-                    password_txtbox.Clear();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Invalid Input");
+                string connectString = $"Persist Security Info=False; Integrated Security = true; Initial Catalog = {database}; server = GAMING-DESKTOP\\SQLSERVER; User ID = {user}; Password = {password};";
+                SqlConnection con = new SqlConnection(connectString);
+                con.Open();
+                DataAccess_Form da = new DataAccess_Form();
+                da.Show();
+                da.EstablishConnection(con);
+                Username_TxtBox.Clear();
+                Password_TxtBox.Clear();
+                Database_TxtBox.Clear();
             }
         }
 
@@ -58,15 +50,15 @@ namespace SQLDatabaseApp
             Application.Exit();
         }
 
-        private void password_txtbox_TextChanged(object sender, EventArgs e)
+        private void Password_TxtBox_TextChanged(object sender, EventArgs e)
         {
-            if (password_txtbox.Text.Length > 0)
+            if (Password_TxtBox.Text.Length > 0)
             {
-                login_button.Enabled = true;
+                Login_Button.Enabled = true;
             }
             else
             {
-                login_button.Enabled = false;
+                Login_Button.Enabled = false;
             }
         }
     }

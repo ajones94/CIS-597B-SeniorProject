@@ -10,22 +10,24 @@ using System.Windows.Forms;
 
 namespace SQLDatabaseApp
 {
-    public partial class TableInputForm : Form
+    public partial class RemoveCustomer_Form : Form
     {
-        private string table;
-        public TableInputForm()
+        private string customer;
+
+        public RemoveCustomer_Form()
         {
             InitializeComponent();
         }
 
-        private void table_button_Click(object sender, EventArgs e)
+        private void submit_Button_Click(object sender, EventArgs e)
         {
-            table = table_txtbox.Text;
+            customer = RemoveCustomer_TxtBox.Text;
             Close();
         }
-        public string GetTable()
+
+        public void GetCustomer(out string Customer)
         {
-            return table;
+            Customer = customer;
         }
     }
 }

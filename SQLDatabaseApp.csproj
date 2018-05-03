@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,9 +24,10 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,7 +49,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,46 +69,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_Access.cs">
+    <Compile Include="Customer.cs" />
+    <Compile Include="RemoveCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Access.Designer.cs">
-      <DependentUpon>Admin_Access.cs</DependentUpon>
+    <Compile Include="RemoveCustomer.Designer.cs">
+      <DependentUpon>RemoveCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssignPriveleges.cs">
+    <Compile Include="AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssignPriveleges.Designer.cs">
-      <DependentUpon>AssignPriveleges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateTable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateTable.Designer.cs">
-      <DependentUpon>CreateTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateUser.Designer.cs">
-      <DependentUpon>CreateUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RemoveData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RemoveData.Designer.cs">
-      <DependentUpon>RemoveData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddData.Designer.cs">
-      <DependentUpon>AddData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sampleDatabaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>sampleDatabaseDataSet1.xsd</DependentUpon>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLDatabase.cs">
       <SubType>Form</SubType>
@@ -109,36 +90,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TableInput.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TableInput.Designer.cs">
-      <DependentUpon>TableInput.cs</DependentUpon>
-    </Compile>
     <Compile Include="TextSanitation.cs" />
-    <Compile Include="User_Access.cs">
+    <Compile Include="DataAccess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User_Access.Designer.cs">
-      <DependentUpon>User_Access.cs</DependentUpon>
+    <Compile Include="DataAccess.Designer.cs">
+      <DependentUpon>DataAccess.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin_Access.resx">
-      <DependentUpon>Admin_Access.cs</DependentUpon>
+    <Compile Include="UpdateCustomer_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer_Form.Designer.cs">
+      <DependentUpon>UpdateCustomer_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RemoveCustomer.resx">
+      <DependentUpon>RemoveCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssignPriveleges.resx">
-      <DependentUpon>AssignPriveleges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateTable.resx">
-      <DependentUpon>CreateTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateUser.resx">
-      <DependentUpon>CreateUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemoveData.resx">
-      <DependentUpon>RemoveData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddData.resx">
-      <DependentUpon>AddData.cs</DependentUpon>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,12 +121,13 @@
     <EmbeddedResource Include="SQLDatabase.resx">
       <DependentUpon>SQLDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TableInput.resx">
-      <DependentUpon>TableInput.cs</DependentUpon>
+    <EmbeddedResource Include="DataAccess.resx">
+      <DependentUpon>DataAccess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User_Access.resx">
-      <DependentUpon>User_Access.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateCustomer_Form.resx">
+      <DependentUpon>UpdateCustomer_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,29 +137,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="sampleDatabaseDataSet1.xsc">
-      <DependentUpon>sampleDatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="sampleDatabaseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>sampleDatabaseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="sampleDatabaseDataSet1.xss">
-      <DependentUpon>sampleDatabaseDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="testDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="testDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>testDatabase.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

@@ -28,111 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.username_label = new System.Windows.Forms.Label();
-            this.password_label = new System.Windows.Forms.Label();
-            this.username_txtbox = new System.Windows.Forms.TextBox();
-            this.password_txtbox = new System.Windows.Forms.TextBox();
-            this.login_button = new System.Windows.Forms.Button();
-            this.user_button = new System.Windows.Forms.RadioButton();
-            this.admin_button = new System.Windows.Forms.RadioButton();
+            this.Login_Button = new System.Windows.Forms.Button();
             this.exit_Button = new System.Windows.Forms.Button();
+            this.Username_Label = new System.Windows.Forms.Label();
+            this.Password_Label = new System.Windows.Forms.Label();
+            this.Database_Label = new System.Windows.Forms.Label();
+            this.Username_TxtBox = new System.Windows.Forms.TextBox();
+            this.Database_TxtBox = new System.Windows.Forms.TextBox();
+            this.Password_TxtBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // username_label
+            // Login_Button
             // 
-            this.username_label.AutoSize = true;
-            this.username_label.Location = new System.Drawing.Point(11, 18);
-            this.username_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.username_label.Name = "username_label";
-            this.username_label.Size = new System.Drawing.Size(58, 13);
-            this.username_label.TabIndex = 1;
-            this.username_label.Text = "Username:";
-            // 
-            // password_label
-            // 
-            this.password_label.AutoSize = true;
-            this.password_label.Location = new System.Drawing.Point(11, 42);
-            this.password_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.password_label.Name = "password_label";
-            this.password_label.Size = new System.Drawing.Size(56, 13);
-            this.password_label.TabIndex = 2;
-            this.password_label.Text = "Password:";
-            // 
-            // username_txtbox
-            // 
-            this.username_txtbox.Location = new System.Drawing.Point(84, 11);
-            this.username_txtbox.Margin = new System.Windows.Forms.Padding(2);
-            this.username_txtbox.Name = "username_txtbox";
-            this.username_txtbox.Size = new System.Drawing.Size(130, 20);
-            this.username_txtbox.TabIndex = 4;
-            // 
-            // password_txtbox
-            // 
-            this.password_txtbox.Location = new System.Drawing.Point(84, 35);
-            this.password_txtbox.Margin = new System.Windows.Forms.Padding(2);
-            this.password_txtbox.Name = "password_txtbox";
-            this.password_txtbox.Size = new System.Drawing.Size(130, 20);
-            this.password_txtbox.TabIndex = 5;
-            this.password_txtbox.TextChanged += new System.EventHandler(this.password_txtbox_TextChanged);
-            // 
-            // login_button
-            // 
-            this.login_button.Enabled = false;
-            this.login_button.Location = new System.Drawing.Point(12, 124);
-            this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(90, 28);
-            this.login_button.TabIndex = 6;
-            this.login_button.Text = "Login";
-            this.login_button.UseVisualStyleBackColor = true;
-            this.login_button.Click += new System.EventHandler(this.login_button_Click);
-            // 
-            // user_button
-            // 
-            this.user_button.AutoSize = true;
-            this.user_button.Location = new System.Drawing.Point(84, 71);
-            this.user_button.Name = "user_button";
-            this.user_button.Size = new System.Drawing.Size(47, 17);
-            this.user_button.TabIndex = 7;
-            this.user_button.TabStop = true;
-            this.user_button.Text = "User";
-            this.user_button.UseVisualStyleBackColor = true;
-            // 
-            // admin_button
-            // 
-            this.admin_button.AutoSize = true;
-            this.admin_button.Location = new System.Drawing.Point(84, 94);
-            this.admin_button.Name = "admin_button";
-            this.admin_button.Size = new System.Drawing.Size(54, 17);
-            this.admin_button.TabIndex = 8;
-            this.admin_button.TabStop = true;
-            this.admin_button.Text = "Admin";
-            this.admin_button.UseVisualStyleBackColor = true;
+            this.Login_Button.Enabled = false;
+            this.Login_Button.Location = new System.Drawing.Point(30, 202);
+            this.Login_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Login_Button.Name = "Login_Button";
+            this.Login_Button.Size = new System.Drawing.Size(180, 54);
+            this.Login_Button.TabIndex = 6;
+            this.Login_Button.Text = "Login";
+            this.Login_Button.UseVisualStyleBackColor = true;
+            this.Login_Button.Click += new System.EventHandler(this.Login_Button_Click);
             // 
             // exit_Button
             // 
-            this.exit_Button.Location = new System.Drawing.Point(123, 124);
+            this.exit_Button.Location = new System.Drawing.Point(370, 202);
+            this.exit_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.exit_Button.Name = "exit_Button";
-            this.exit_Button.Size = new System.Drawing.Size(90, 28);
+            this.exit_Button.Size = new System.Drawing.Size(180, 54);
             this.exit_Button.TabIndex = 9;
             this.exit_Button.Text = "Exit";
             this.exit_Button.UseVisualStyleBackColor = true;
             this.exit_Button.Click += new System.EventHandler(this.exit_Button_Click);
             // 
+            // Username_Label
+            // 
+            this.Username_Label.AutoSize = true;
+            this.Username_Label.Location = new System.Drawing.Point(24, 65);
+            this.Username_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Username_Label.Name = "Username_Label";
+            this.Username_Label.Size = new System.Drawing.Size(110, 25);
+            this.Username_Label.TabIndex = 10;
+            this.Username_Label.Text = "Username";
+            // 
+            // Password_Label
+            // 
+            this.Password_Label.AutoSize = true;
+            this.Password_Label.Location = new System.Drawing.Point(24, 149);
+            this.Password_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Password_Label.Name = "Password_Label";
+            this.Password_Label.Size = new System.Drawing.Size(106, 25);
+            this.Password_Label.TabIndex = 11;
+            this.Password_Label.Text = "Password";
+            // 
+            // Database_Label
+            // 
+            this.Database_Label.AutoSize = true;
+            this.Database_Label.Location = new System.Drawing.Point(24, 109);
+            this.Database_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Database_Label.Name = "Database_Label";
+            this.Database_Label.Size = new System.Drawing.Size(104, 25);
+            this.Database_Label.TabIndex = 15;
+            this.Database_Label.Text = "Database";
+            // 
+            // Username_TxtBox
+            // 
+            this.Username_TxtBox.Location = new System.Drawing.Point(164, 56);
+            this.Username_TxtBox.Multiline = true;
+            this.Username_TxtBox.Name = "Username_TxtBox";
+            this.Username_TxtBox.Size = new System.Drawing.Size(382, 34);
+            this.Username_TxtBox.TabIndex = 16;
+            // 
+            // Database_TxtBox
+            // 
+            this.Database_TxtBox.Location = new System.Drawing.Point(164, 96);
+            this.Database_TxtBox.Multiline = true;
+            this.Database_TxtBox.Name = "Database_TxtBox";
+            this.Database_TxtBox.Size = new System.Drawing.Size(382, 38);
+            this.Database_TxtBox.TabIndex = 17;
+            // 
+            // Password_TxtBox
+            // 
+            this.Password_TxtBox.Location = new System.Drawing.Point(164, 140);
+            this.Password_TxtBox.Multiline = true;
+            this.Password_TxtBox.Name = "Password_TxtBox";
+            this.Password_TxtBox.Size = new System.Drawing.Size(382, 34);
+            this.Password_TxtBox.TabIndex = 18;
+            // 
             // SQLDatabase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(225, 164);
+            this.ClientSize = new System.Drawing.Size(574, 273);
+            this.Controls.Add(this.Password_TxtBox);
+            this.Controls.Add(this.Database_TxtBox);
+            this.Controls.Add(this.Username_TxtBox);
+            this.Controls.Add(this.Database_Label);
+            this.Controls.Add(this.Password_Label);
+            this.Controls.Add(this.Username_Label);
             this.Controls.Add(this.exit_Button);
-            this.Controls.Add(this.admin_button);
-            this.Controls.Add(this.user_button);
-            this.Controls.Add(this.login_button);
-            this.Controls.Add(this.password_txtbox);
-            this.Controls.Add(this.username_txtbox);
-            this.Controls.Add(this.password_label);
-            this.Controls.Add(this.username_label);
+            this.Controls.Add(this.Login_Button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SQLDatabase";
             this.Text = "Database Login";
             this.ResumeLayout(false);
@@ -141,14 +138,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label username_label;
-        private System.Windows.Forms.Label password_label;
-        private System.Windows.Forms.TextBox username_txtbox;
-        private System.Windows.Forms.TextBox password_txtbox;
-        private System.Windows.Forms.Button login_button;
-        private System.Windows.Forms.RadioButton user_button;
-        private System.Windows.Forms.RadioButton admin_button;
+        private System.Windows.Forms.Button Login_Button;
         private System.Windows.Forms.Button exit_Button;
+        private System.Windows.Forms.Label Username_Label;
+        private System.Windows.Forms.Label Password_Label;
+        private System.Windows.Forms.Label Database_Label;
+        private System.Windows.Forms.TextBox Username_TxtBox;
+        private System.Windows.Forms.TextBox Database_TxtBox;
+        private System.Windows.Forms.TextBox Password_TxtBox;
     }
 }
 
