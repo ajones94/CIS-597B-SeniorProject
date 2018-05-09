@@ -1,6 +1,6 @@
 ﻿namespace SQLDatabaseApp
 {
-    partial class AddCustomer_Form
+    partial class AddData_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,61 +29,67 @@
         private void InitializeComponent()
         {
             this.CustomerName_Label = new System.Windows.Forms.Label();
-            this.customerName_TxtBox = new System.Windows.Forms.TextBox();
-            this.customerID_TxtBox = new System.Windows.Forms.TextBox();
+            this.Column1_TxtBox = new System.Windows.Forms.TextBox();
+            this.Column2_TxtBox = new System.Windows.Forms.TextBox();
             this.CustomerID_Label = new System.Windows.Forms.Label();
             this.instruction_Label = new System.Windows.Forms.Label();
             this.insert_Submit = new System.Windows.Forms.Button();
             this.CustomerOrder_Label = new System.Windows.Forms.Label();
-            this.CustomerOrder_TxtBox = new System.Windows.Forms.TextBox();
+            this.Column3_TxtBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CustomerName_Label
             // 
             this.CustomerName_Label.AutoSize = true;
-            this.CustomerName_Label.Location = new System.Drawing.Point(12, 38);
+            this.CustomerName_Label.Location = new System.Drawing.Point(24, 73);
+            this.CustomerName_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CustomerName_Label.Name = "CustomerName_Label";
-            this.CustomerName_Label.Size = new System.Drawing.Size(82, 13);
+            this.CustomerName_Label.Size = new System.Drawing.Size(103, 25);
             this.CustomerName_Label.TabIndex = 0;
-            this.CustomerName_Label.Text = "Customer Name";
+            this.CustomerName_Label.Text = "Column 1";
             // 
-            // customerName_TxtBox
+            // Column1_TxtBox
             // 
-            this.customerName_TxtBox.Location = new System.Drawing.Point(131, 31);
-            this.customerName_TxtBox.Name = "customerName_TxtBox";
-            this.customerName_TxtBox.Size = new System.Drawing.Size(182, 20);
-            this.customerName_TxtBox.TabIndex = 1;
+            this.Column1_TxtBox.Location = new System.Drawing.Point(139, 67);
+            this.Column1_TxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.Column1_TxtBox.Name = "Column1_TxtBox";
+            this.Column1_TxtBox.Size = new System.Drawing.Size(360, 31);
+            this.Column1_TxtBox.TabIndex = 1;
             // 
-            // customerID_TxtBox
+            // Column2_TxtBox
             // 
-            this.customerID_TxtBox.Location = new System.Drawing.Point(131, 57);
-            this.customerID_TxtBox.Name = "customerID_TxtBox";
-            this.customerID_TxtBox.Size = new System.Drawing.Size(182, 20);
-            this.customerID_TxtBox.TabIndex = 2;
+            this.Column2_TxtBox.Location = new System.Drawing.Point(143, 117);
+            this.Column2_TxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.Column2_TxtBox.Name = "Column2_TxtBox";
+            this.Column2_TxtBox.Size = new System.Drawing.Size(360, 31);
+            this.Column2_TxtBox.TabIndex = 2;
             // 
             // CustomerID_Label
             // 
             this.CustomerID_Label.AutoSize = true;
-            this.CustomerID_Label.Location = new System.Drawing.Point(14, 64);
+            this.CustomerID_Label.Location = new System.Drawing.Point(28, 123);
+            this.CustomerID_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CustomerID_Label.Name = "CustomerID_Label";
-            this.CustomerID_Label.Size = new System.Drawing.Size(65, 13);
+            this.CustomerID_Label.Size = new System.Drawing.Size(103, 25);
             this.CustomerID_Label.TabIndex = 3;
-            this.CustomerID_Label.Text = "Customer ID";
+            this.CustomerID_Label.Text = "Column 2";
             // 
             // instruction_Label
             // 
             this.instruction_Label.AutoSize = true;
-            this.instruction_Label.Location = new System.Drawing.Point(74, 9);
+            this.instruction_Label.Location = new System.Drawing.Point(148, 17);
+            this.instruction_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.instruction_Label.Name = "instruction_Label";
-            this.instruction_Label.Size = new System.Drawing.Size(167, 13);
+            this.instruction_Label.Size = new System.Drawing.Size(341, 25);
             this.instruction_Label.TabIndex = 6;
             this.instruction_Label.Text = "Please provide all necessary input";
             // 
             // insert_Submit
             // 
-            this.insert_Submit.Location = new System.Drawing.Point(15, 109);
+            this.insert_Submit.Location = new System.Drawing.Point(30, 210);
+            this.insert_Submit.Margin = new System.Windows.Forms.Padding(6);
             this.insert_Submit.Name = "insert_Submit";
-            this.insert_Submit.Size = new System.Drawing.Size(298, 30);
+            this.insert_Submit.Size = new System.Drawing.Size(596, 58);
             this.insert_Submit.TabIndex = 7;
             this.insert_Submit.Text = "Submit";
             this.insert_Submit.UseVisualStyleBackColor = true;
@@ -92,35 +98,38 @@
             // CustomerOrder_Label
             // 
             this.CustomerOrder_Label.AutoSize = true;
-            this.CustomerOrder_Label.Location = new System.Drawing.Point(14, 90);
+            this.CustomerOrder_Label.Location = new System.Drawing.Point(28, 173);
+            this.CustomerOrder_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CustomerOrder_Label.Name = "CustomerOrder_Label";
-            this.CustomerOrder_Label.Size = new System.Drawing.Size(113, 13);
+            this.CustomerOrder_Label.Size = new System.Drawing.Size(103, 25);
             this.CustomerOrder_Label.TabIndex = 8;
-            this.CustomerOrder_Label.Text = "Customer Order Status";
+            this.CustomerOrder_Label.Text = "Column 3";
             // 
-            // CustomerOrder_TxtBox
+            // Column3_TxtBox
             // 
-            this.CustomerOrder_TxtBox.Location = new System.Drawing.Point(131, 83);
-            this.CustomerOrder_TxtBox.Name = "CustomerOrder_TxtBox";
-            this.CustomerOrder_TxtBox.Size = new System.Drawing.Size(182, 20);
-            this.CustomerOrder_TxtBox.TabIndex = 9;
+            this.Column3_TxtBox.Location = new System.Drawing.Point(143, 167);
+            this.Column3_TxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.Column3_TxtBox.Name = "Column3_TxtBox";
+            this.Column3_TxtBox.Size = new System.Drawing.Size(360, 31);
+            this.Column3_TxtBox.TabIndex = 9;
             // 
-            // AddCustomer_Form
+            // AddData_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 151);
-            this.Controls.Add(this.CustomerOrder_TxtBox);
+            this.ClientSize = new System.Drawing.Size(641, 290);
+            this.Controls.Add(this.Column3_TxtBox);
             this.Controls.Add(this.CustomerOrder_Label);
             this.Controls.Add(this.insert_Submit);
             this.Controls.Add(this.instruction_Label);
             this.Controls.Add(this.CustomerID_Label);
-            this.Controls.Add(this.customerID_TxtBox);
-            this.Controls.Add(this.customerName_TxtBox);
+            this.Controls.Add(this.Column2_TxtBox);
+            this.Controls.Add(this.Column1_TxtBox);
             this.Controls.Add(this.CustomerName_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "AddCustomer_Form";
-            this.Text = "Add Customer";
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "AddData_Form";
+            this.Text = "Add Data";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,12 +138,12 @@
         #endregion
 
         private System.Windows.Forms.Label CustomerName_Label;
-        private System.Windows.Forms.TextBox customerName_TxtBox;
-        private System.Windows.Forms.TextBox customerID_TxtBox;
+        private System.Windows.Forms.TextBox Column1_TxtBox;
+        private System.Windows.Forms.TextBox Column2_TxtBox;
         private System.Windows.Forms.Label CustomerID_Label;
         private System.Windows.Forms.Label instruction_Label;
         private System.Windows.Forms.Button insert_Submit;
         private System.Windows.Forms.Label CustomerOrder_Label;
-        private System.Windows.Forms.TextBox CustomerOrder_TxtBox;
+        private System.Windows.Forms.TextBox Column3_TxtBox;
     }
 }

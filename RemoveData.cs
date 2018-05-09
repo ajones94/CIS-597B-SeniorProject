@@ -10,24 +10,27 @@ using System.Windows.Forms;
 
 namespace SQLDatabaseApp
 {
-    public partial class RemoveCustomer_Form : Form
+    public partial class RemoveData_Form : Form
     {
-        private string customer;
+        private string Column;
+        private string Value;
 
-        public RemoveCustomer_Form()
+        public RemoveData_Form()
         {
             InitializeComponent();
         }
 
         private void submit_Button_Click(object sender, EventArgs e)
         {
-            customer = RemoveCustomer_TxtBox.Text;
+            Column = ColumnName_TxtBox.Text;
+            Value = ColumnValue_Txtbox.Text;
             Close();
         }
 
-        public void GetCustomer(out string Customer)
+        public void GetData(out string column, out string value)
         {
-            Customer = customer;
+            column = Column;
+            value = Value;
         }
     }
 }

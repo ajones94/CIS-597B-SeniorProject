@@ -28,71 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.RemoveCustomer_Button = new System.Windows.Forms.Button();
-            this.ViewCustomers_Button = new System.Windows.Forms.Button();
-            this.updateCustomer_button = new System.Windows.Forms.Button();
-            this.AddCustomer_Button = new System.Windows.Forms.Button();
+            this.RemoveData_Button = new System.Windows.Forms.Button();
+            this.ViewData_Button = new System.Windows.Forms.Button();
+            this.UpdateData_button = new System.Windows.Forms.Button();
+            this.AddData_Button = new System.Windows.Forms.Button();
             this.CustomerList = new System.Windows.Forms.ListBox();
+            this.Exit_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // RemoveCustomer_Button
+            // RemoveData_Button
             // 
-            this.RemoveCustomer_Button.Location = new System.Drawing.Point(12, 50);
-            this.RemoveCustomer_Button.Name = "RemoveCustomer_Button";
-            this.RemoveCustomer_Button.Size = new System.Drawing.Size(89, 41);
-            this.RemoveCustomer_Button.TabIndex = 1;
-            this.RemoveCustomer_Button.Text = "Remove Customer";
-            this.RemoveCustomer_Button.UseVisualStyleBackColor = true;
-            this.RemoveCustomer_Button.Click += new System.EventHandler(this.RemoveCustomer_Button_Click);
+            this.RemoveData_Button.Location = new System.Drawing.Point(24, 96);
+            this.RemoveData_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.RemoveData_Button.Name = "RemoveData_Button";
+            this.RemoveData_Button.Size = new System.Drawing.Size(178, 79);
+            this.RemoveData_Button.TabIndex = 1;
+            this.RemoveData_Button.Text = "Remove Data";
+            this.RemoveData_Button.UseVisualStyleBackColor = true;
+            this.RemoveData_Button.Click += new System.EventHandler(this.RemoveCustomer_Button_Click);
             // 
-            // ViewCustomers_Button
+            // ViewData_Button
             // 
-            this.ViewCustomers_Button.Location = new System.Drawing.Point(12, 97);
-            this.ViewCustomers_Button.Name = "ViewCustomers_Button";
-            this.ViewCustomers_Button.Size = new System.Drawing.Size(89, 40);
-            this.ViewCustomers_Button.TabIndex = 3;
-            this.ViewCustomers_Button.Text = "View Customers";
-            this.ViewCustomers_Button.UseVisualStyleBackColor = true;
-            this.ViewCustomers_Button.Click += new System.EventHandler(this.ViewCustomers_Button_Click);
+            this.ViewData_Button.Location = new System.Drawing.Point(24, 187);
+            this.ViewData_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.ViewData_Button.Name = "ViewData_Button";
+            this.ViewData_Button.Size = new System.Drawing.Size(178, 77);
+            this.ViewData_Button.TabIndex = 3;
+            this.ViewData_Button.Text = "View Data";
+            this.ViewData_Button.UseVisualStyleBackColor = true;
+            this.ViewData_Button.Click += new System.EventHandler(this.ViewCustomers_Button_Click);
             // 
-            // updateCustomer_button
+            // UpdateData_button
             // 
-            this.updateCustomer_button.Location = new System.Drawing.Point(12, 143);
-            this.updateCustomer_button.Name = "updateCustomer_button";
-            this.updateCustomer_button.Size = new System.Drawing.Size(89, 42);
-            this.updateCustomer_button.TabIndex = 5;
-            this.updateCustomer_button.Text = "Update Customer";
-            this.updateCustomer_button.UseVisualStyleBackColor = true;
-            this.updateCustomer_button.Click += new System.EventHandler(this.updateCustomer_button_Click);
+            this.UpdateData_button.Location = new System.Drawing.Point(24, 275);
+            this.UpdateData_button.Margin = new System.Windows.Forms.Padding(6);
+            this.UpdateData_button.Name = "UpdateData_button";
+            this.UpdateData_button.Size = new System.Drawing.Size(178, 81);
+            this.UpdateData_button.TabIndex = 5;
+            this.UpdateData_button.Text = "Update Data";
+            this.UpdateData_button.UseVisualStyleBackColor = true;
+            this.UpdateData_button.Click += new System.EventHandler(this.updateCustomer_button_Click);
             // 
-            // AddCustomer_Button
+            // AddData_Button
             // 
-            this.AddCustomer_Button.Location = new System.Drawing.Point(12, 12);
-            this.AddCustomer_Button.Name = "AddCustomer_Button";
-            this.AddCustomer_Button.Size = new System.Drawing.Size(89, 32);
-            this.AddCustomer_Button.TabIndex = 6;
-            this.AddCustomer_Button.Text = "Add Customer";
-            this.AddCustomer_Button.UseVisualStyleBackColor = true;
-            this.AddCustomer_Button.Click += new System.EventHandler(this.AddCustomer_Button_Click);
+            this.AddData_Button.Location = new System.Drawing.Point(24, 23);
+            this.AddData_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.AddData_Button.Name = "AddData_Button";
+            this.AddData_Button.Size = new System.Drawing.Size(178, 62);
+            this.AddData_Button.TabIndex = 6;
+            this.AddData_Button.Text = "Add Data";
+            this.AddData_Button.UseVisualStyleBackColor = true;
+            this.AddData_Button.Click += new System.EventHandler(this.AddCustomer_Button_Click);
             // 
             // CustomerList
             // 
             this.CustomerList.FormattingEnabled = true;
-            this.CustomerList.Location = new System.Drawing.Point(115, 12);
+            this.CustomerList.ItemHeight = 25;
+            this.CustomerList.Location = new System.Drawing.Point(230, 23);
+            this.CustomerList.Margin = new System.Windows.Forms.Padding(6);
             this.CustomerList.Name = "CustomerList";
-            this.CustomerList.Size = new System.Drawing.Size(397, 420);
+            this.CustomerList.Size = new System.Drawing.Size(790, 804);
             this.CustomerList.TabIndex = 7;
+            // 
+            // Exit_Button
+            // 
+            this.Exit_Button.Location = new System.Drawing.Point(24, 767);
+            this.Exit_Button.Name = "Exit_Button";
+            this.Exit_Button.Size = new System.Drawing.Size(178, 60);
+            this.Exit_Button.TabIndex = 8;
+            this.Exit_Button.Text = "Exit";
+            this.Exit_Button.UseVisualStyleBackColor = true;
+            this.Exit_Button.Click += new System.EventHandler(this.Exit_Button_Click);
             // 
             // DataAccess_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 444);
+            this.ClientSize = new System.Drawing.Size(1048, 854);
+            this.Controls.Add(this.Exit_Button);
             this.Controls.Add(this.CustomerList);
-            this.Controls.Add(this.AddCustomer_Button);
-            this.Controls.Add(this.updateCustomer_button);
-            this.Controls.Add(this.ViewCustomers_Button);
-            this.Controls.Add(this.RemoveCustomer_Button);
+            this.Controls.Add(this.AddData_Button);
+            this.Controls.Add(this.UpdateData_button);
+            this.Controls.Add(this.ViewData_Button);
+            this.Controls.Add(this.RemoveData_Button);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "DataAccess_Form";
             this.Text = "Data Access";
             this.ResumeLayout(false);
@@ -101,10 +120,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button RemoveCustomer_Button;
-        private System.Windows.Forms.Button AddCustomer_Button;
-        private System.Windows.Forms.Button ViewCustomers_Button;
-        private System.Windows.Forms.Button updateCustomer_button;
+        private System.Windows.Forms.Button RemoveData_Button;
+        private System.Windows.Forms.Button AddData_Button;
+        private System.Windows.Forms.Button ViewData_Button;
+        private System.Windows.Forms.Button UpdateData_button;
         private System.Windows.Forms.ListBox CustomerList;
+        private System.Windows.Forms.Button Exit_Button;
     }
 }

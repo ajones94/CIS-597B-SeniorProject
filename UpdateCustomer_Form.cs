@@ -10,26 +10,27 @@ using System.Windows.Forms;
 
 namespace SQLDatabaseApp
 {
-    public partial class UpdateCustomer_Form : Form
+    public partial class UpdateData_Form : Form
     {
-        string name;
-        string orderStatus;
-        public UpdateCustomer_Form()
+        string ColumnName;
+        string ColumnValue;
+        public UpdateData_Form()
         {
             InitializeComponent();
         }
 
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-            name = CustomerName_TxtBox.Text;
-            orderStatus = UpdateCustomer_TxtBox.Text;
+            ColumnName = UpdateColumn_TxtBox.Text;
+            ColumnValue = UpdateValue_TxtBox.Text;
+
             Close();
         }
 
-        public void GetStatus(out string Name, out string OrderStatus)
+        public void GetStatus(out string column, out string value)
         {
-            Name = name;
-            OrderStatus = orderStatus;
+            column = ColumnName;
+            value = ColumnValue;
         }
     }
 }

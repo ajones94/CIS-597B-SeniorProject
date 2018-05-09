@@ -16,8 +16,10 @@ namespace SQLDatabaseApp
         string user = "";
         string password = "";
         string database = "";
+
         DataAccess_Form User = new DataAccess_Form();
         TextSanitation ts = new TextSanitation();
+        DataAccess_Form da = new DataAccess_Form();
 
         public SQLDatabase()
         {
@@ -31,14 +33,16 @@ namespace SQLDatabaseApp
             user = Username_TxtBox.Text;
             password = Password_TxtBox.Text;
             database = Database_TxtBox.Text;
+
             if (ts.SanitizeText(user) && ts.SanitizeText(password) && ts.SanitizeText(database))
             {
                 string connectString = $"Persist Security Info=False; Integrated Security = true; Initial Catalog = {database}; server = GAMING-DESKTOP\\SQLSERVER; User ID = {user}; Password = {password};";
                 SqlConnection con = new SqlConnection(connectString);
                 con.Open();
-                DataAccess_Form da = new DataAccess_Form();
+
                 da.Show();
-                da.EstablishConnection(con);
+                da.EstablishConnection(con, database);
+
                 Username_TxtBox.Clear();
                 Password_TxtBox.Clear();
                 Database_TxtBox.Clear();

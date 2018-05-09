@@ -14,7 +14,8 @@ namespace SQLDatabaseApp
     public partial class DataAccess_Form : Form
     {
         private SqlConnection Connection = new SqlConnection();
-        private TextSanitation textSan = new TextSanitation();
+        private TextSanitation TextSan = new TextSanitation();
+        private string Database = "";
 
         public DataAccess_Form()
         {
@@ -24,10 +25,10 @@ namespace SQLDatabaseApp
         private void RemoveCustomer_Button_Click(object sender, EventArgs e)
         {
             string customer = "";
-            RemoveCustomer_Form removeCustomer = new RemoveCustomer_Form();
+            RemoveData_Form removeCustomer = new RemoveData_Form();
             removeCustomer.ShowDialog();
             removeCustomer.GetCustomer(out customer);
-            if (textSan.SanitizeText(customer))
+            if (TextSan.SanitizeText(customer))
             {
                 try
                 {
@@ -74,7 +75,7 @@ namespace SQLDatabaseApp
         {
             string status = "";
             string name = "";
-            UpdateCustomer_Form updateCustomer = new UpdateCustomer_Form();
+            UpdateData_Form updateCustomer = new UpdateData_Form();
             updateCustomer.ShowDialog();
 
             updateCustomer.GetStatus(out name, out status);
@@ -96,14 +97,15 @@ namespace SQLDatabaseApp
             string name;
             string id;
             string order;
-            AddCustomer_Form addCustomer = new AddCustomer_Form();
+            AddData_Form addCustomer = new AddData_Form();
             addCustomer.ShowDialog();
             addCustomer.GetCustomerData(out name, out id, out order);
             try
             {
-                if (textSan.SanitizeText(name))
+                if (TextSan.SanitizeText(name))
                 {
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Customer (Name, ID, OrderStatus) VALUES (@name, @id, @order)", Connection);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO @table (Name, ID, OrderStatus) VALUES (@name, @id, @order)", Connection);
+                    cmd.Parameters.AddWithValue("@table", Database);
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@order", order);
@@ -116,9 +118,16 @@ namespace SQLDatabaseApp
             }
         }
 
-        public void EstablishConnection(SqlConnection con)
+        public void EstablishConnection(SqlConnection con, string database)
         {
             Connection = con;
+            Database = database;
+        }
+
+        private void Exit_Button_Click(object sender, EventArgs e)
+        {
+            Connection.Close();
+            Application.Exit();
         }
     }
 }
