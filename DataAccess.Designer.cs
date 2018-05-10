@@ -34,6 +34,7 @@
             this.AddData_Button = new System.Windows.Forms.Button();
             this.CustomerList = new System.Windows.Forms.ListBox();
             this.Exit_Button = new System.Windows.Forms.Button();
+            this.SelectTable_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RemoveData_Button
@@ -45,7 +46,7 @@
             this.RemoveData_Button.TabIndex = 1;
             this.RemoveData_Button.Text = "Remove Data";
             this.RemoveData_Button.UseVisualStyleBackColor = true;
-            this.RemoveData_Button.Click += new System.EventHandler(this.RemoveCustomer_Button_Click);
+            this.RemoveData_Button.Click += new System.EventHandler(this.RemoveData_Button_Click);
             // 
             // ViewData_Button
             // 
@@ -56,7 +57,7 @@
             this.ViewData_Button.TabIndex = 3;
             this.ViewData_Button.Text = "View Data";
             this.ViewData_Button.UseVisualStyleBackColor = true;
-            this.ViewData_Button.Click += new System.EventHandler(this.ViewCustomers_Button_Click);
+            this.ViewData_Button.Click += new System.EventHandler(this.ViewData_Button_Click);
             // 
             // UpdateData_button
             // 
@@ -67,7 +68,7 @@
             this.UpdateData_button.TabIndex = 5;
             this.UpdateData_button.Text = "Update Data";
             this.UpdateData_button.UseVisualStyleBackColor = true;
-            this.UpdateData_button.Click += new System.EventHandler(this.updateCustomer_button_Click);
+            this.UpdateData_button.Click += new System.EventHandler(this.UpdateData_button_Click);
             // 
             // AddData_Button
             // 
@@ -78,7 +79,7 @@
             this.AddData_Button.TabIndex = 6;
             this.AddData_Button.Text = "Add Data";
             this.AddData_Button.UseVisualStyleBackColor = true;
-            this.AddData_Button.Click += new System.EventHandler(this.AddCustomer_Button_Click);
+            this.AddData_Button.Click += new System.EventHandler(this.AddData_Button_Click);
             // 
             // CustomerList
             // 
@@ -100,11 +101,22 @@
             this.Exit_Button.UseVisualStyleBackColor = true;
             this.Exit_Button.Click += new System.EventHandler(this.Exit_Button_Click);
             // 
+            // SelectTable_Button
+            // 
+            this.SelectTable_Button.Location = new System.Drawing.Point(24, 365);
+            this.SelectTable_Button.Name = "SelectTable_Button";
+            this.SelectTable_Button.Size = new System.Drawing.Size(178, 66);
+            this.SelectTable_Button.TabIndex = 9;
+            this.SelectTable_Button.Text = "Select Table";
+            this.SelectTable_Button.UseVisualStyleBackColor = true;
+            this.SelectTable_Button.Click += new System.EventHandler(this.SelectTable_Button_Click);
+            // 
             // DataAccess_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 854);
+            this.Controls.Add(this.SelectTable_Button);
             this.Controls.Add(this.Exit_Button);
             this.Controls.Add(this.CustomerList);
             this.Controls.Add(this.AddData_Button);
@@ -126,5 +138,6 @@
         private System.Windows.Forms.Button UpdateData_button;
         private System.Windows.Forms.ListBox CustomerList;
         private System.Windows.Forms.Button Exit_Button;
+        private System.Windows.Forms.Button SelectTable_Button;
     }
 }

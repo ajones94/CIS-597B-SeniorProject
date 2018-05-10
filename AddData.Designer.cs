@@ -41,7 +41,7 @@
             // CustomerName_Label
             // 
             this.CustomerName_Label.AutoSize = true;
-            this.CustomerName_Label.Location = new System.Drawing.Point(24, 73);
+            this.CustomerName_Label.Location = new System.Drawing.Point(25, 73);
             this.CustomerName_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CustomerName_Label.Name = "CustomerName_Label";
             this.CustomerName_Label.Size = new System.Drawing.Size(103, 25);
@@ -50,7 +50,7 @@
             // 
             // Column1_TxtBox
             // 
-            this.Column1_TxtBox.Location = new System.Drawing.Point(139, 67);
+            this.Column1_TxtBox.Location = new System.Drawing.Point(140, 67);
             this.Column1_TxtBox.Margin = new System.Windows.Forms.Padding(6);
             this.Column1_TxtBox.Name = "Column1_TxtBox";
             this.Column1_TxtBox.Size = new System.Drawing.Size(360, 31);
@@ -58,7 +58,7 @@
             // 
             // Column2_TxtBox
             // 
-            this.Column2_TxtBox.Location = new System.Drawing.Point(143, 117);
+            this.Column2_TxtBox.Location = new System.Drawing.Point(140, 117);
             this.Column2_TxtBox.Margin = new System.Windows.Forms.Padding(6);
             this.Column2_TxtBox.Name = "Column2_TxtBox";
             this.Column2_TxtBox.Size = new System.Drawing.Size(360, 31);
@@ -67,7 +67,7 @@
             // CustomerID_Label
             // 
             this.CustomerID_Label.AutoSize = true;
-            this.CustomerID_Label.Location = new System.Drawing.Point(28, 123);
+            this.CustomerID_Label.Location = new System.Drawing.Point(25, 123);
             this.CustomerID_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CustomerID_Label.Name = "CustomerID_Label";
             this.CustomerID_Label.Size = new System.Drawing.Size(103, 25);
@@ -77,7 +77,7 @@
             // instruction_Label
             // 
             this.instruction_Label.AutoSize = true;
-            this.instruction_Label.Location = new System.Drawing.Point(148, 17);
+            this.instruction_Label.Location = new System.Drawing.Point(85, 19);
             this.instruction_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.instruction_Label.Name = "instruction_Label";
             this.instruction_Label.Size = new System.Drawing.Size(341, 25);
@@ -89,7 +89,7 @@
             this.insert_Submit.Location = new System.Drawing.Point(30, 210);
             this.insert_Submit.Margin = new System.Windows.Forms.Padding(6);
             this.insert_Submit.Name = "insert_Submit";
-            this.insert_Submit.Size = new System.Drawing.Size(596, 58);
+            this.insert_Submit.Size = new System.Drawing.Size(470, 58);
             this.insert_Submit.TabIndex = 7;
             this.insert_Submit.Text = "Submit";
             this.insert_Submit.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             // 
             // Column3_TxtBox
             // 
-            this.Column3_TxtBox.Location = new System.Drawing.Point(143, 167);
+            this.Column3_TxtBox.Location = new System.Drawing.Point(140, 167);
             this.Column3_TxtBox.Margin = new System.Windows.Forms.Padding(6);
             this.Column3_TxtBox.Name = "Column3_TxtBox";
             this.Column3_TxtBox.Size = new System.Drawing.Size(360, 31);
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 290);
+            this.ClientSize = new System.Drawing.Size(523, 290);
             this.Controls.Add(this.Column3_TxtBox);
             this.Controls.Add(this.CustomerOrder_Label);
             this.Controls.Add(this.insert_Submit);

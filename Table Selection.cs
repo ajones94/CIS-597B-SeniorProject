@@ -10,27 +10,23 @@ using System.Windows.Forms;
 
 namespace SQLDatabaseApp
 {
-    public partial class UpdateData_Form : Form
+    public partial class TableSelection_Form : Form
     {
-        string ColumnName;
-        string ColumnValue;
-        public UpdateData_Form()
+        string tableName = "";
+        public TableSelection_Form()
         {
             InitializeComponent();
         }
 
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-            ColumnName = UpdateColumn_TxtBox.Text;
-            ColumnValue = UpdateValue_TxtBox.Text;
-
+            tableName = TableName_TxtBox.Text;
             Close();
         }
 
-        public void GetStatus(out string column, out string value)
+        public string GetTableName()
         {
-            column = ColumnName;
-            value = ColumnValue;
+            return tableName;
         }
     }
 }

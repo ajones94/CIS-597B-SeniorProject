@@ -36,16 +36,23 @@ namespace SQLDatabaseApp
 
             if (ts.SanitizeText(user) && ts.SanitizeText(password) && ts.SanitizeText(database))
             {
-                string connectString = $"Persist Security Info=False; Integrated Security = true; Initial Catalog = {database}; server = GAMING-DESKTOP\\SQLSERVER; User ID = {user}; Password = {password};";
-                SqlConnection con = new SqlConnection(connectString);
-                con.Open();
+                try
+                {
+                    string connectString = $"Persist Security Info=False; Integrated Security = true; Initial Catalog = {database}; server = GAMING-DESKTOP\\SQLSERVER; User ID = {user}; Password = {password};";
+                    SqlConnection con = new SqlConnection(connectString);
+                    con.Open();
 
-                da.Show();
-                da.EstablishConnection(con, database);
+                    da.Show();
+                    da.EstablishConnection(con, database);
 
-                Username_TxtBox.Clear();
-                Password_TxtBox.Clear();
-                Database_TxtBox.Clear();
+                    Username_TxtBox.Clear();
+                    Password_TxtBox.Clear();
+                    Database_TxtBox.Clear();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("An Error has occured");
+                }
             }
         }
 
