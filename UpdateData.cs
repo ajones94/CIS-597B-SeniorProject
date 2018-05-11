@@ -12,10 +12,11 @@ namespace SQLDatabaseApp
 {
     public partial class UpdateData_Form : Form
     {
-        string updateColumn = "";
-        string updateValue = "";
-        string columnToUpdate = "";
-        string rowToUpdate = "";
+        string columnToBeUpdated = "";
+        string RowToBeUpdated = "";
+        string ColumnThatAppliesUpdate = "";
+        string RowThatAppliesUpdate = "";
+
         public UpdateData_Form()
         {
             InitializeComponent();
@@ -23,19 +24,26 @@ namespace SQLDatabaseApp
 
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-            updateColumn = UpdatedColumn_TxtBox.Text;
-            updateValue = UpdatedValue_TxtBox.Text;
-            columnToUpdate = WhereToApply_TxtBox.Text;
-            rowToUpdate = RowValueToUpdate_TxtBox.Text;
-            Close();
+            if(ColumnToBeUpdated_TxtBox.Text == "" || RowToBeUpdated_TxtBox.Text == "" || ColumnThatAppliesUpdate_TxtBox.Text == "" || RowThatAppliesUpdate_TxtBox.Text == "")
+            {
+                MessageBox.Show("Input cannot be empty or NULL");
+            }
+            else
+            {
+                columnToBeUpdated = ColumnToBeUpdated_TxtBox.Text;
+                RowToBeUpdated = RowToBeUpdated_TxtBox.Text;
+                ColumnThatAppliesUpdate = ColumnThatAppliesUpdate_TxtBox.Text;
+                RowThatAppliesUpdate = RowThatAppliesUpdate_TxtBox.Text;
+                Close();
+            }
         }
 
-        public void GetStatus(out string columnUpdate, out string valueUpdate, out string selectCol, out string RowValue)
+        public void GetStatus(out string ColumnUpdated, out string RowUpdated, out string ColumnToUpdate, out string RowToUpdate)
         {
-            columnUpdate = updateColumn;
-            valueUpdate = updateValue;
-            selectCol = columnToUpdate;
-            RowValue = rowToUpdate; 
+            ColumnUpdated = columnToBeUpdated;
+            RowUpdated = RowToBeUpdated;
+            ColumnToUpdate = ColumnThatAppliesUpdate;
+            RowToUpdate = RowThatAppliesUpdate;
         }
     }
 }

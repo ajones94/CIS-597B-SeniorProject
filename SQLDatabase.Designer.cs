@@ -42,7 +42,7 @@
             // 
             this.Login_Button.Enabled = false;
             this.Login_Button.Location = new System.Drawing.Point(30, 202);
-            this.Login_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Login_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Login_Button.Name = "Login_Button";
             this.Login_Button.Size = new System.Drawing.Size(180, 54);
             this.Login_Button.TabIndex = 6;
@@ -53,7 +53,7 @@
             // exit_Button
             // 
             this.exit_Button.Location = new System.Drawing.Point(370, 202);
-            this.exit_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.exit_Button.Margin = new System.Windows.Forms.Padding(6);
             this.exit_Button.Name = "exit_Button";
             this.exit_Button.Size = new System.Drawing.Size(180, 54);
             this.exit_Button.TabIndex = 9;
@@ -114,6 +114,7 @@
             this.Password_TxtBox.Name = "Password_TxtBox";
             this.Password_TxtBox.Size = new System.Drawing.Size(382, 34);
             this.Password_TxtBox.TabIndex = 18;
+            this.Password_TxtBox.TextChanged += new System.EventHandler(this.Password_TxtBox_TextChanged);
             // 
             // SQLDatabase
             // 
@@ -129,7 +130,7 @@
             this.Controls.Add(this.exit_Button);
             this.Controls.Add(this.Login_Button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SQLDatabase";
             this.Text = "Database Login";
             this.ResumeLayout(false);

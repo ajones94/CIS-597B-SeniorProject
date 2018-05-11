@@ -18,6 +18,7 @@ namespace SQLDatabaseApp
         private string table = "";
         Table tableColumns;
         private string columnNames = "";
+        string[] columns;
 
         public DataAccess_Form()
         {
@@ -32,29 +33,27 @@ namespace SQLDatabaseApp
         private void Exit_Button_Click(object sender, EventArgs e)
         {
             Connection.Close();
-            Application.Exit();
+            Close();
         }
 
         private void AddData_Button_Click(object sender, EventArgs e)
         {
-            if (table != null || table != "")
+            if (table != "")
             {
-                string name;
-                string id;
-                string order;
+                string value1;
+                string value2;
+                string value3;
                 AddData_Form addCustomer = new AddData_Form();
                 addCustomer.ShowDialog();
-                addCustomer.GetCustomerData(out name, out id, out order);
-
-                if (TextSan.SanitizeText(name))
+                addCustomer.GetCustomerData(out value1, out value2, out value3);
+                if (TextSan.SanitizeText(value1) && TextSan.SanitizeText(value2) && TextSan.SanitizeText(value3))
                 {
                     try
                     {
-                        SqlCommand cmd = new SqlCommand("INSERT INTO @table (Name, ID, OrderStatus) VALUES (@name, @id, @order)", Connection);
-                        cmd.Parameters.AddWithValue("@table", table);
-                        cmd.Parameters.AddWithValue("@name", name);
-                        cmd.Parameters.AddWithValue("@id", id);
-                        cmd.Parameters.AddWithValue("@order", order);
+                        SqlCommand cmd = new SqlCommand($"INSERT INTO {table} ({columns[0]}, {columns[1]}, {columns[2]}) VALUES (@value1, @value2, @value3)", Connection);
+                        cmd.Parameters.AddWithValue("@value1",value1);
+                        cmd.Parameters.AddWithValue("@value2", value2);
+                        cmd.Parameters.AddWithValue("@value3", value3);
                         cmd.ExecuteNonQuery();
                     }
                     catch (ArgumentException)
@@ -65,7 +64,7 @@ namespace SQLDatabaseApp
             }
             else
             {
-                MessageBox.Show("A Table must be selected before Adding, Removing, or Viewing Data");
+                MessageBox.Show("A Table must be selected before Adding, Removing, Updating, or Viewing Data");
                 return;
             }
         }
@@ -75,19 +74,16 @@ namespace SQLDatabaseApp
             string column = "";
             string value = "";
 
-            if(table != null || table != "")
+            if(table != "")
             {
                 RemoveData_Form removeData = new RemoveData_Form();
                 removeData.ShowDialog();
                 removeData.GetData(out column, out value);
-
                 if (TextSan.SanitizeText(column) && TextSan.SanitizeText(value))
                 {
                     try
                     {
-                        SqlCommand cmd = new SqlCommand("DELETE FROM @table WHERE @column = @Value", Connection);
-                        cmd.Parameters.AddWithValue("@table", table);
-                        cmd.Parameters.AddWithValue("@column", column);
+                        SqlCommand cmd = new SqlCommand($"DELETE FROM {table} WHERE {column} = @value", Connection);
                         cmd.Parameters.AddWithValue("@value", value);
                         cmd.ExecuteNonQuery();
 
@@ -100,7 +96,7 @@ namespace SQLDatabaseApp
             }
             else
             {
-                MessageBox.Show("A Table must be selected before Adding, Removing, or Viewing Data");
+                MessageBox.Show("A Table must be selected before Adding, Removing, Updating, or Viewing Data");
                 return;
             }
         }
@@ -111,7 +107,7 @@ namespace SQLDatabaseApp
             string updateValue;
             string columnName;
             string rowName;
-            if(table != null || table != "")
+            if(table != "")
             {
                 UpdateData_Form updateData = new UpdateData_Form();
                 updateData.ShowDialog();
@@ -119,11 +115,8 @@ namespace SQLDatabaseApp
 
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("UPDATE @table SET @columnUpdate = @update WHERE @columnName = @rowData", Connection);
-                    cmd.Parameters.AddWithValue("@table", table);
-                    cmd.Parameters.AddWithValue("@columnUpdate", columnUpdate);
+                    SqlCommand cmd = new SqlCommand($"UPDATE {table} SET {columnUpdate} = @update WHERE {columnName} = @rowData", Connection);
                     cmd.Parameters.AddWithValue("@update", updateValue);
-                    cmd.Parameters.AddWithValue("@columnName", columnName);
                     cmd.Parameters.AddWithValue("@rowData", rowName);
                     cmd.ExecuteNonQuery();
                 }
@@ -134,7 +127,7 @@ namespace SQLDatabaseApp
             }
             else
             {
-                MessageBox.Show("A Table must be selected before Adding, Removing, or Viewing Data");
+                MessageBox.Show("A Table must be selected before Adding, Removing, Updating, or Viewing Data");
                 return;
             }
         }
@@ -146,19 +139,31 @@ namespace SQLDatabaseApp
             table = tableSelect.GetTableName();
             tableColumns = new Table(Connection, table);
             columnNames = tableColumns.GetColumnNames();
+            columns = columnNames.Split(',');
         }
 
         private void ViewData_Button_Click(object sender, EventArgs e)
         {
-            if(table != null || table != "")
+            DataView.Items.Clear();
+            if(table != "")
             {
-                CustomerList.Items.Clear();
-                DataTable table = new DataTable();
+                DataTable dt = new DataTable();
                 try
                 {
-                    SqlCommand cmd = new SqlCommand($"SELECT * FROM {table}", Connection);
+                    SqlCommand cmd = new SqlCommand($"SELECT * FROM {table} ", Connection);
+
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    adapter.Fill(table);
+                    adapter.Fill(dt);
+
+                    for(int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        ListViewItem row = new ListViewItem(dt.Rows[i][0].ToString());
+                        for(int j = 1; j < dt.Columns.Count; j++)
+                        {
+                            row.SubItems.Add(dt.Rows[i][j].ToString());
+                        }
+                        DataView.Items.Add(row);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -167,7 +172,7 @@ namespace SQLDatabaseApp
             }
             else
             {
-                MessageBox.Show("A Table must be selected before Adding, Removing, or Viewing Data");
+                MessageBox.Show("A Table must be selected before Adding, Removing, Updating, or Viewing Data");
                 return;
             }
         }

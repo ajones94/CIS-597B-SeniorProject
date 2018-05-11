@@ -17,10 +17,17 @@ namespace SQLDatabaseApp
         public bool SanitizeText(string input)
         {
             string pattern = "^[a-zA-Z0-9_/-@]+$";
-            Match match = Regex.Match(input, pattern);
+            if(input != null)
+            {
+                Match match = Regex.Match(input, pattern);
 
-            if (match.Success) { return true; }
-            else { return false; }
+                if (match.Success) { return true; }
+                else { return false; }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

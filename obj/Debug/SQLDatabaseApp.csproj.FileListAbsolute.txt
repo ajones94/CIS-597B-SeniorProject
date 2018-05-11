@@ -43,24 +43,24 @@ C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.pdb
 C:\Users\Anson Jones\Dropbox\Project\bin\Debug\SQLDatabaseApp.exe
 C:\Users\Anson Jones\Dropbox\Project\bin\Debug\SQLDatabaseApp.pdb
 C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.csprojResolveAssemblyReference.cache
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.Admin_Access.resources
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.CreateUser_Form.resources
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.delete_Form.resources
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.Insert_Form.resources
 C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.Properties.Resources.resources
 C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.SQLDatabase.resources
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.TableInputForm.resources
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.User_Access.resources
 C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.csproj.GenerateResource.Cache
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.AssignPriveleges_Form.resources
-C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.CreateTable_Form.resources
-C:\Users\Anson Jones\Dropbox\Project\bin\Debug\testDatabase.mdf
-C:\Users\Anson Jones\Dropbox\Project\bin\Debug\testDatabase_log.ldf
-C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.RemoveCustomer_Form.resources
-C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.AddCustomer_Form.resources
 C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.DataAccess_Form.resources
-C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.UpdateCustomer_Form.resources
 C:\Users\Handedtoo2\Dropbox\Project\bin\Debug\EntityFramework.dll
 C:\Users\Handedtoo2\Dropbox\Project\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Handedtoo2\Dropbox\Project\bin\Debug\EntityFramework.xml
 C:\Users\Handedtoo2\Dropbox\Project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.RemoveData_Form.resources
+C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.AddData_Form.resources
+C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.DataAccess_Form.resources
+C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.TableSelection_Form.resources
+C:\Users\Anson Jones\Dropbox\Project\obj\Debug\SQLDatabaseApp.UpdateData_Form.resources
+C:\Users\Anson Jones\Dropbox\Project\bin\Debug\EntityFramework.dll
+C:\Users\Anson Jones\Dropbox\Project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anson Jones\Dropbox\Project\bin\Debug\EntityFramework.xml
+C:\Users\Anson Jones\Dropbox\Project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.RemoveData_Form.resources
+C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.AddData_Form.resources
+C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.TableSelection_Form.resources
+C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.UpdateData_Form.resources

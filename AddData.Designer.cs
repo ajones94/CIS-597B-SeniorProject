@@ -41,55 +41,50 @@
             // CustomerName_Label
             // 
             this.CustomerName_Label.AutoSize = true;
-            this.CustomerName_Label.Location = new System.Drawing.Point(25, 73);
-            this.CustomerName_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.CustomerName_Label.Location = new System.Drawing.Point(12, 38);
             this.CustomerName_Label.Name = "CustomerName_Label";
-            this.CustomerName_Label.Size = new System.Drawing.Size(103, 25);
+            this.CustomerName_Label.Size = new System.Drawing.Size(91, 13);
             this.CustomerName_Label.TabIndex = 0;
-            this.CustomerName_Label.Text = "Column 1";
+            this.CustomerName_Label.Text = "Data for column 1";
             // 
             // Column1_TxtBox
             // 
-            this.Column1_TxtBox.Location = new System.Drawing.Point(140, 67);
-            this.Column1_TxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.Column1_TxtBox.Location = new System.Drawing.Point(111, 31);
             this.Column1_TxtBox.Name = "Column1_TxtBox";
-            this.Column1_TxtBox.Size = new System.Drawing.Size(360, 31);
+            this.Column1_TxtBox.Size = new System.Drawing.Size(305, 20);
             this.Column1_TxtBox.TabIndex = 1;
             // 
             // Column2_TxtBox
             // 
-            this.Column2_TxtBox.Location = new System.Drawing.Point(140, 117);
-            this.Column2_TxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.Column2_TxtBox.Location = new System.Drawing.Point(111, 57);
             this.Column2_TxtBox.Name = "Column2_TxtBox";
-            this.Column2_TxtBox.Size = new System.Drawing.Size(360, 31);
+            this.Column2_TxtBox.Size = new System.Drawing.Size(305, 20);
             this.Column2_TxtBox.TabIndex = 2;
             // 
             // CustomerID_Label
             // 
             this.CustomerID_Label.AutoSize = true;
-            this.CustomerID_Label.Location = new System.Drawing.Point(25, 123);
-            this.CustomerID_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.CustomerID_Label.Location = new System.Drawing.Point(14, 64);
             this.CustomerID_Label.Name = "CustomerID_Label";
-            this.CustomerID_Label.Size = new System.Drawing.Size(103, 25);
+            this.CustomerID_Label.Size = new System.Drawing.Size(91, 13);
             this.CustomerID_Label.TabIndex = 3;
-            this.CustomerID_Label.Text = "Column 2";
+            this.CustomerID_Label.Text = "Data for column 2";
             // 
             // instruction_Label
             // 
             this.instruction_Label.AutoSize = true;
-            this.instruction_Label.Location = new System.Drawing.Point(85, 19);
-            this.instruction_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.instruction_Label.Location = new System.Drawing.Point(12, 9);
             this.instruction_Label.Name = "instruction_Label";
-            this.instruction_Label.Size = new System.Drawing.Size(341, 25);
+            this.instruction_Label.Size = new System.Drawing.Size(404, 13);
             this.instruction_Label.TabIndex = 6;
-            this.instruction_Label.Text = "Please provide all necessary input";
+            this.instruction_Label.Text = "Please provide all necessary information for column data (Must Not Be Empty or Nu" +
+    "ll)";
             // 
             // insert_Submit
             // 
-            this.insert_Submit.Location = new System.Drawing.Point(30, 210);
-            this.insert_Submit.Margin = new System.Windows.Forms.Padding(6);
+            this.insert_Submit.Location = new System.Drawing.Point(17, 109);
             this.insert_Submit.Name = "insert_Submit";
-            this.insert_Submit.Size = new System.Drawing.Size(470, 58);
+            this.insert_Submit.Size = new System.Drawing.Size(399, 30);
             this.insert_Submit.TabIndex = 7;
             this.insert_Submit.Text = "Submit";
             this.insert_Submit.UseVisualStyleBackColor = true;
@@ -98,26 +93,24 @@
             // CustomerOrder_Label
             // 
             this.CustomerOrder_Label.AutoSize = true;
-            this.CustomerOrder_Label.Location = new System.Drawing.Point(28, 173);
-            this.CustomerOrder_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.CustomerOrder_Label.Location = new System.Drawing.Point(14, 90);
             this.CustomerOrder_Label.Name = "CustomerOrder_Label";
-            this.CustomerOrder_Label.Size = new System.Drawing.Size(103, 25);
+            this.CustomerOrder_Label.Size = new System.Drawing.Size(91, 13);
             this.CustomerOrder_Label.TabIndex = 8;
-            this.CustomerOrder_Label.Text = "Column 3";
+            this.CustomerOrder_Label.Text = "Data for column 3";
             // 
             // Column3_TxtBox
             // 
-            this.Column3_TxtBox.Location = new System.Drawing.Point(140, 167);
-            this.Column3_TxtBox.Margin = new System.Windows.Forms.Padding(6);
+            this.Column3_TxtBox.Location = new System.Drawing.Point(111, 83);
             this.Column3_TxtBox.Name = "Column3_TxtBox";
-            this.Column3_TxtBox.Size = new System.Drawing.Size(360, 31);
+            this.Column3_TxtBox.Size = new System.Drawing.Size(305, 20);
             this.Column3_TxtBox.TabIndex = 9;
             // 
             // AddData_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 290);
+            this.ClientSize = new System.Drawing.Size(435, 151);
             this.Controls.Add(this.Column3_TxtBox);
             this.Controls.Add(this.CustomerOrder_Label);
             this.Controls.Add(this.insert_Submit);
@@ -127,7 +120,6 @@
             this.Controls.Add(this.Column1_TxtBox);
             this.Controls.Add(this.CustomerName_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddData_Form";
             this.Text = "Add Data";
             this.ResumeLayout(false);

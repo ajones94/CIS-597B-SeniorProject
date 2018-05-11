@@ -66,10 +66,10 @@
             // 
             // submit_Button
             // 
-            this.submit_Button.Location = new System.Drawing.Point(37, 177);
+            this.submit_Button.Location = new System.Drawing.Point(33, 177);
             this.submit_Button.Margin = new System.Windows.Forms.Padding(6);
             this.submit_Button.Name = "submit_Button";
-            this.submit_Button.Size = new System.Drawing.Size(596, 62);
+            this.submit_Button.Size = new System.Drawing.Size(593, 62);
             this.submit_Button.TabIndex = 7;
             this.submit_Button.Text = "Submit";
             this.submit_Button.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@
             this.ColumnValue_Label.AutoSize = true;
             this.ColumnValue_Label.Location = new System.Drawing.Point(28, 126);
             this.ColumnValue_Label.Name = "ColumnValue_Label";
-            this.ColumnValue_Label.Size = new System.Drawing.Size(146, 25);
+            this.ColumnValue_Label.Size = new System.Drawing.Size(115, 25);
             this.ColumnValue_Label.TabIndex = 8;
-            this.ColumnValue_Label.Text = "Column Value";
+            this.ColumnValue_Label.Text = "Row Value";
             // 
             // ColumnValue_Txtbox
             // 

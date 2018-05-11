@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace SQLDatabaseApp
 {
@@ -19,18 +20,20 @@ namespace SQLDatabaseApp
 
         public string GetColumnNames()
         {
+            DataTable dt = new DataTable();
             StringBuilder sb = new StringBuilder();
             using (SqlCommand cmd = new SqlCommand($"SELECT * FROM {tableName}", connection))
             {
-                SqlDataReader rd = cmd.ExecuteReader();
-                while (rd.Read())
+                using(SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    for(int i = 0; i < rd.FieldCount; i++)
+                    dt = rd.GetSchemaTable();
+                    foreach(DataRow field in dt.Rows)
                     {
-                        sb.Append(rd.GetName(i) + ", ");
+                        sb.Append(field[0].ToString() + ", ");
                     }
                 }
             }
+            
             return sb.ToString();
         }
     }

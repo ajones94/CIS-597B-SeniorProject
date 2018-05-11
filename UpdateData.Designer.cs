@@ -29,123 +29,104 @@
         private void InitializeComponent()
         {
             this.Submit_Button = new System.Windows.Forms.Button();
-            this.UpdatedValue_Label = new System.Windows.Forms.Label();
-            this.UpdatedValue_TxtBox = new System.Windows.Forms.TextBox();
-            this.WhereToApply_TxtBox = new System.Windows.Forms.TextBox();
-            this.ColumnToApply_Label = new System.Windows.Forms.Label();
-            this.Instruction_Label = new System.Windows.Forms.Label();
-            this.UpdateColumn_Label = new System.Windows.Forms.Label();
-            this.UpdatedColumn_TxtBox = new System.Windows.Forms.TextBox();
+            this.ColumnToBeUpdated_TxtBox = new System.Windows.Forms.TextBox();
+            this.RowToBeUpdated_TxtBox = new System.Windows.Forms.TextBox();
+            this.ColumnThatAppliesUpdate_TxtBox = new System.Windows.Forms.TextBox();
+            this.RowThatAppliesUpdate_TxtBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.RowValueToUpdate_TxtBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Submit_Button
             // 
-            this.Submit_Button.Location = new System.Drawing.Point(39, 258);
-            this.Submit_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.Submit_Button.Location = new System.Drawing.Point(15, 130);
             this.Submit_Button.Name = "Submit_Button";
-            this.Submit_Button.Size = new System.Drawing.Size(796, 62);
+            this.Submit_Button.Size = new System.Drawing.Size(403, 32);
             this.Submit_Button.TabIndex = 0;
             this.Submit_Button.Text = "Submit";
             this.Submit_Button.UseVisualStyleBackColor = true;
             this.Submit_Button.Click += new System.EventHandler(this.Submit_Button_Click);
             // 
-            // UpdatedValue_Label
+            // ColumnToBeUpdated_TxtBox
             // 
-            this.UpdatedValue_Label.AutoSize = true;
-            this.UpdatedValue_Label.Location = new System.Drawing.Point(34, 130);
-            this.UpdatedValue_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.UpdatedValue_Label.Name = "UpdatedValue_Label";
-            this.UpdatedValue_Label.Size = new System.Drawing.Size(154, 25);
-            this.UpdatedValue_Label.TabIndex = 1;
-            this.UpdatedValue_Label.Text = "Updated Value";
+            this.ColumnToBeUpdated_TxtBox.Location = new System.Drawing.Point(273, 12);
+            this.ColumnToBeUpdated_TxtBox.Name = "ColumnToBeUpdated_TxtBox";
+            this.ColumnToBeUpdated_TxtBox.Size = new System.Drawing.Size(145, 20);
+            this.ColumnToBeUpdated_TxtBox.TabIndex = 1;
             // 
-            // UpdatedValue_TxtBox
+            // RowToBeUpdated_TxtBox
             // 
-            this.UpdatedValue_TxtBox.Location = new System.Drawing.Point(477, 124);
-            this.UpdatedValue_TxtBox.Margin = new System.Windows.Forms.Padding(6);
-            this.UpdatedValue_TxtBox.Name = "UpdatedValue_TxtBox";
-            this.UpdatedValue_TxtBox.Size = new System.Drawing.Size(358, 31);
-            this.UpdatedValue_TxtBox.TabIndex = 2;
+            this.RowToBeUpdated_TxtBox.Location = new System.Drawing.Point(273, 38);
+            this.RowToBeUpdated_TxtBox.Name = "RowToBeUpdated_TxtBox";
+            this.RowToBeUpdated_TxtBox.Size = new System.Drawing.Size(145, 20);
+            this.RowToBeUpdated_TxtBox.TabIndex = 2;
             // 
-            // WhereToApply_TxtBox
+            // ColumnThatAppliesUpdate_TxtBox
             // 
-            this.WhereToApply_TxtBox.Location = new System.Drawing.Point(477, 167);
-            this.WhereToApply_TxtBox.Margin = new System.Windows.Forms.Padding(6);
-            this.WhereToApply_TxtBox.Name = "WhereToApply_TxtBox";
-            this.WhereToApply_TxtBox.Size = new System.Drawing.Size(358, 31);
-            this.WhereToApply_TxtBox.TabIndex = 3;
+            this.ColumnThatAppliesUpdate_TxtBox.Location = new System.Drawing.Point(273, 64);
+            this.ColumnThatAppliesUpdate_TxtBox.Name = "ColumnThatAppliesUpdate_TxtBox";
+            this.ColumnThatAppliesUpdate_TxtBox.Size = new System.Drawing.Size(145, 20);
+            this.ColumnThatAppliesUpdate_TxtBox.TabIndex = 3;
             // 
-            // ColumnToApply_Label
+            // RowThatAppliesUpdate_TxtBox
             // 
-            this.ColumnToApply_Label.AutoSize = true;
-            this.ColumnToApply_Label.Location = new System.Drawing.Point(34, 173);
-            this.ColumnToApply_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.ColumnToApply_Label.Name = "ColumnToApply_Label";
-            this.ColumnToApply_Label.Size = new System.Drawing.Size(363, 25);
-            this.ColumnToApply_Label.TabIndex = 4;
-            this.ColumnToApply_Label.Text = "Column where update will be applied";
+            this.RowThatAppliesUpdate_TxtBox.Location = new System.Drawing.Point(273, 90);
+            this.RowThatAppliesUpdate_TxtBox.Name = "RowThatAppliesUpdate_TxtBox";
+            this.RowThatAppliesUpdate_TxtBox.Size = new System.Drawing.Size(145, 20);
+            this.RowThatAppliesUpdate_TxtBox.TabIndex = 4;
             // 
-            // Instruction_Label
+            // label1
             // 
-            this.Instruction_Label.AutoSize = true;
-            this.Instruction_Label.Location = new System.Drawing.Point(92, 29);
-            this.Instruction_Label.Name = "Instruction_Label";
-            this.Instruction_Label.Size = new System.Drawing.Size(688, 25);
-            this.Instruction_Label.TabIndex = 5;
-            this.Instruction_Label.Text = "Please provide necessary information to Update a Column with a value";
-            // 
-            // UpdateColumn_Label
-            // 
-            this.UpdateColumn_Label.AutoSize = true;
-            this.UpdateColumn_Label.Location = new System.Drawing.Point(34, 90);
-            this.UpdateColumn_Label.Name = "UpdateColumn_Label";
-            this.UpdateColumn_Label.Size = new System.Drawing.Size(184, 25);
-            this.UpdateColumn_Label.TabIndex = 6;
-            this.UpdateColumn_Label.Text = "Column to Update";
-            // 
-            // UpdatedColumn_TxtBox
-            // 
-            this.UpdatedColumn_TxtBox.Location = new System.Drawing.Point(477, 84);
-            this.UpdatedColumn_TxtBox.Multiline = true;
-            this.UpdatedColumn_TxtBox.Name = "UpdatedColumn_TxtBox";
-            this.UpdatedColumn_TxtBox.Size = new System.Drawing.Size(358, 31);
-            this.UpdatedColumn_TxtBox.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Column to be Updated";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 212);
+            this.label2.Location = new System.Drawing.Point(12, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(311, 25);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Row of Column to apply update";
+            this.label2.Size = new System.Drawing.Size(142, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Value of Row to be Updated";
             // 
-            // RowValueToUpdate_TxtBox
+            // label3
             // 
-            this.RowValueToUpdate_TxtBox.Location = new System.Drawing.Point(477, 207);
-            this.RowValueToUpdate_TxtBox.Multiline = true;
-            this.RowValueToUpdate_TxtBox.Name = "RowValueToUpdate_TxtBox";
-            this.RowValueToUpdate_TxtBox.Size = new System.Drawing.Size(358, 30);
-            this.RowValueToUpdate_TxtBox.TabIndex = 9;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(255, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Column of where Update is applied (Name, ID, e.t.c.)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(179, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Value of the row that applies Update";
             // 
             // UpdateData_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 348);
-            this.Controls.Add(this.RowValueToUpdate_TxtBox);
+            this.ClientSize = new System.Drawing.Size(430, 172);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.UpdatedColumn_TxtBox);
-            this.Controls.Add(this.UpdateColumn_Label);
-            this.Controls.Add(this.Instruction_Label);
-            this.Controls.Add(this.ColumnToApply_Label);
-            this.Controls.Add(this.WhereToApply_TxtBox);
-            this.Controls.Add(this.UpdatedValue_TxtBox);
-            this.Controls.Add(this.UpdatedValue_Label);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RowThatAppliesUpdate_TxtBox);
+            this.Controls.Add(this.ColumnThatAppliesUpdate_TxtBox);
+            this.Controls.Add(this.RowToBeUpdated_TxtBox);
+            this.Controls.Add(this.ColumnToBeUpdated_TxtBox);
             this.Controls.Add(this.Submit_Button);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UpdateData_Form";
             this.Text = "Update Data";
             this.ResumeLayout(false);
@@ -156,14 +137,13 @@
         #endregion
 
         private System.Windows.Forms.Button Submit_Button;
-        private System.Windows.Forms.Label UpdatedValue_Label;
-        private System.Windows.Forms.TextBox UpdatedValue_TxtBox;
-        private System.Windows.Forms.TextBox WhereToApply_TxtBox;
-        private System.Windows.Forms.Label ColumnToApply_Label;
-        private System.Windows.Forms.Label Instruction_Label;
-        private System.Windows.Forms.Label UpdateColumn_Label;
-        private System.Windows.Forms.TextBox UpdatedColumn_TxtBox;
+        private System.Windows.Forms.TextBox ColumnToBeUpdated_TxtBox;
+        private System.Windows.Forms.TextBox RowToBeUpdated_TxtBox;
+        private System.Windows.Forms.TextBox ColumnThatAppliesUpdate_TxtBox;
+        private System.Windows.Forms.TextBox RowThatAppliesUpdate_TxtBox;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox RowValueToUpdate_TxtBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

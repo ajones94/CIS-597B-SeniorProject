@@ -17,7 +17,6 @@ namespace SQLDatabaseApp
         string password = "";
         string database = "";
 
-        DataAccess_Form User = new DataAccess_Form();
         TextSanitation ts = new TextSanitation();
         DataAccess_Form da = new DataAccess_Form();
 
@@ -43,7 +42,7 @@ namespace SQLDatabaseApp
                     con.Open();
 
                     da.Show();
-                    da.EstablishConnection(con, database);
+                    da.EstablishConnection(con);
 
                     Username_TxtBox.Clear();
                     Password_TxtBox.Clear();
@@ -51,7 +50,7 @@ namespace SQLDatabaseApp
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("An Error has occured");
+                    MessageBox.Show("An Error has occured" + ex.ToString());
                 }
             }
         }

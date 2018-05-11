@@ -20,8 +20,15 @@ namespace SQLDatabaseApp
 
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-            tableName = TableName_TxtBox.Text;
-            Close();
+            if(TableName_TxtBox.Text == "")
+            {
+                MessageBox.Show("Input cannot be empty or NULL");
+            }
+            else
+            {
+                tableName = TableName_TxtBox.Text;
+                Close();
+            }
         }
 
         public string GetTableName()

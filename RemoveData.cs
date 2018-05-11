@@ -22,9 +22,16 @@ namespace SQLDatabaseApp
 
         private void submit_Button_Click(object sender, EventArgs e)
         {
-            Column = ColumnName_TxtBox.Text;
-            Value = ColumnValue_Txtbox.Text;
-            Close();
+            if(ColumnName_TxtBox.Text == "" || ColumnValue_Txtbox.Text == "")
+            {
+                MessageBox.Show("Input must not be Empty or NULL");
+            }
+            else
+            {
+                Column = ColumnName_TxtBox.Text;
+                Value = ColumnValue_Txtbox.Text;
+                Close();
+            }
         }
 
         public void GetData(out string column, out string value)
