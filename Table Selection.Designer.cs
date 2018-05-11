@@ -35,9 +35,10 @@
             // 
             // Submit_Button
             // 
-            this.Submit_Button.Location = new System.Drawing.Point(17, 100);
+            this.Submit_Button.Location = new System.Drawing.Point(8, 52);
+            this.Submit_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Submit_Button.Name = "Submit_Button";
-            this.Submit_Button.Size = new System.Drawing.Size(504, 57);
+            this.Submit_Button.Size = new System.Drawing.Size(252, 30);
             this.Submit_Button.TabIndex = 0;
             this.Submit_Button.Text = "Submit";
             this.Submit_Button.UseVisualStyleBackColor = true;
@@ -46,28 +47,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 47);
+            this.label1.Location = new System.Drawing.Point(6, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 25);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Table Name";
             // 
             // TableName_TxtBox
             // 
-            this.TableName_TxtBox.Location = new System.Drawing.Point(146, 41);
+            this.TableName_TxtBox.Location = new System.Drawing.Point(73, 21);
+            this.TableName_TxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TableName_TxtBox.Multiline = true;
             this.TableName_TxtBox.Name = "TableName_TxtBox";
-            this.TableName_TxtBox.Size = new System.Drawing.Size(375, 31);
+            this.TableName_TxtBox.Size = new System.Drawing.Size(190, 18);
             this.TableName_TxtBox.TabIndex = 2;
             // 
             // TableSelection_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 182);
+            this.ClientSize = new System.Drawing.Size(266, 95);
             this.Controls.Add(this.TableName_TxtBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Submit_Button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TableSelection_Form";
             this.Text = "Table_Selection";
             this.ResumeLayout(false);

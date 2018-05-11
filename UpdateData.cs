@@ -22,6 +22,11 @@ namespace SQLDatabaseApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Allows for users to implement column and row tdata o be updated in the table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Submit_Button_Click(object sender, EventArgs e)
         {
             if(ColumnToBeUpdated_TxtBox.Text == "" || RowToBeUpdated_TxtBox.Text == "" || ColumnThatAppliesUpdate_TxtBox.Text == "" || RowThatAppliesUpdate_TxtBox.Text == "")
@@ -38,6 +43,13 @@ namespace SQLDatabaseApp
             }
         }
 
+        /// <summary>
+        /// Gets the current input from the user
+        /// </summary>
+        /// <param name="ColumnUpdated">Column of value to be implemented</param>
+        /// <param name="RowUpdated">Row that has its value updated</param>
+        /// <param name="ColumnToUpdate">Column where this update applies</param>
+        /// <param name="RowToUpdate">Row where this update applies</param>
         public void GetStatus(out string ColumnUpdated, out string RowUpdated, out string ColumnToUpdate, out string RowToUpdate)
         {
             ColumnUpdated = columnToBeUpdated;

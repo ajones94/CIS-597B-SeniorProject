@@ -18,6 +18,11 @@ namespace SQLDatabaseApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Allows user to input table name to be accessed in application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Submit_Button_Click(object sender, EventArgs e)
         {
             if(TableName_TxtBox.Text == "")
@@ -31,6 +36,10 @@ namespace SQLDatabaseApp
             }
         }
 
+        /// <summary>
+        /// Allows for user to access table name
+        /// </summary>
+        /// <returns>table name</returns>
         public string GetTableName()
         {
             return tableName;

@@ -64,3 +64,6 @@ C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.RemoveData_Form.res
 C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.AddData_Form.resources
 C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.TableSelection_Form.resources
 C:\Users\Handedtoo2\Dropbox\Project\obj\Debug\SQLDatabaseApp.UpdateData_Form.resources
+C:\Users\Anson Jones\Desktop\Project\bin\Debug\SQLDatabaseApp.exe.config
+C:\Users\Anson Jones\Desktop\Project\obj\Debug\SQLDatabaseApp.exe
+C:\Users\Anson Jones\Desktop\Project\obj\Debug\SQLDatabaseApp.pdb

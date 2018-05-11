@@ -18,7 +18,6 @@ namespace SQLDatabaseApp
         string database = "";
 
         TextSanitation ts = new TextSanitation();
-        DataAccess_Form da = new DataAccess_Form();
 
         public SQLDatabase()
         {
@@ -27,11 +26,17 @@ namespace SQLDatabaseApp
             Password_TxtBox.MaxLength = 12;
         }
 
+        /// <summary>
+        /// Takes the current input from user to construct an SQLConnection using a specified connnection string
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Login_Button_Click(object sender, EventArgs e)
         {
             user = Username_TxtBox.Text;
             password = Password_TxtBox.Text;
             database = Database_TxtBox.Text;
+            DataAccess_Form da = new DataAccess_Form();
 
             if (ts.SanitizeText(user) && ts.SanitizeText(password) && ts.SanitizeText(database))
             {
@@ -55,11 +60,21 @@ namespace SQLDatabaseApp
             }
         }
 
+        /// <summary>
+        /// Exits the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exit_Button_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Enables login button if password field is greater than zero characters
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Password_TxtBox_TextChanged(object sender, EventArgs e)
         {
             if (Password_TxtBox.Text.Length > 0)

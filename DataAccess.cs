@@ -25,17 +25,33 @@ namespace SQLDatabaseApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Obtains the current open sql connection
+        /// </summary>
+        /// <param name="con">Open SQL connection</param>
         public void EstablishConnection(SqlConnection con)
         {
             Connection = con;
         }
 
+
+        /// <summary>
+        /// Exits the current form and closes the connection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Exit_Button_Click(object sender, EventArgs e)
         {
             Connection.Close();
             Close();
         }
 
+
+        /// <summary>
+        /// Sends form for user to input data to add to a table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddData_Button_Click(object sender, EventArgs e)
         {
             if (table != "")
@@ -69,6 +85,12 @@ namespace SQLDatabaseApp
             }
         }
 
+
+        /// <summary>
+        /// Sends a form that allows the user to input data to be removed from the table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RemoveData_Button_Click(object sender, EventArgs e)
         {
             string column = "";
@@ -101,6 +123,12 @@ namespace SQLDatabaseApp
             }
         }
 
+
+        /// <summary>
+        /// Sends the user a form that allows them to modify specific data on the table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateData_button_Click(object sender, EventArgs e)
         {
             string columnUpdate;
@@ -132,6 +160,12 @@ namespace SQLDatabaseApp
             }
         }
 
+
+        /// <summary>
+        /// Allows a user to input a table that will be accessible.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectTable_Button_Click(object sender, EventArgs e)
         {
             TableSelection_Form tableSelect = new TableSelection_Form();
@@ -142,6 +176,11 @@ namespace SQLDatabaseApp
             columns = columnNames.Split(',');
         }
 
+        /// <summary>
+        /// Allows for users to view the current data on the table specified
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ViewData_Button_Click(object sender, EventArgs e)
         {
             DataView.Items.Clear();

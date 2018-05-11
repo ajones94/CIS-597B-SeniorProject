@@ -20,6 +20,12 @@ namespace SQLDatabaseApp
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// User input is saved to local variables
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void submit_Button_Click(object sender, EventArgs e)
         {
             if(ColumnName_TxtBox.Text == "" || ColumnValue_Txtbox.Text == "")
@@ -34,6 +40,11 @@ namespace SQLDatabaseApp
             }
         }
 
+        /// <summary>
+        /// Allows for program to obtain variables submmitted by User
+        /// </summary>
+        /// <param name="column">Column value that identifies removed variable</param>
+        /// <param name="value">Variable to be removed from table</param>
         public void GetData(out string column, out string value)
         {
             column = Column;

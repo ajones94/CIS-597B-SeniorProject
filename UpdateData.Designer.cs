@@ -127,6 +127,7 @@
             this.Controls.Add(this.RowToBeUpdated_TxtBox);
             this.Controls.Add(this.ColumnToBeUpdated_TxtBox);
             this.Controls.Add(this.Submit_Button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "UpdateData_Form";
             this.Text = "Update Data";
             this.ResumeLayout(false);
